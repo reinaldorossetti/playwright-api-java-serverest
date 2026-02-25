@@ -1,0 +1,5 @@
+nome         ,preco  ,descricao,quantidade
+empty        ,0.55   ,12345#$%&@+_()  ,1000
+Product Test ,-10    ,Desc     ,-5
+Product Test ,100    ,empty    ,0
+Product Test ,1.99  ,Desc     ,-5
