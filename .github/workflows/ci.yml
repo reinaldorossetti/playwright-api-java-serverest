@@ -56,12 +56,6 @@ jobs:
           path: target/allure-report
           if-no-files-found: warn
 
-      - name: Add .nojekyll to report
-        if: always()
-        run: |
-          mkdir -p target/allure-report
-          touch target/allure-report/.nojekyll
-
       - name: Deploy Allure report to gh-pages
         if: always() && github.event_name == 'push'
         uses: peaceiris/actions-gh-pages@v4
