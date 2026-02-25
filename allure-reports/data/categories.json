@@ -1,0 +1,127 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "Resource not found: playwright_serverest/usuarios/resources/userPayload.json",
+      "children" : [ {
+        "name" : "CT12 - Create a user from fixed JSON file",
+        "uid" : "861670d7d0c92c55",
+        "parentUid" : "058a1c4968eb736a217a232f35dfea7a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1772023006831,
+          "stop" : 1772023006840,
+          "duration" : 9
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "CT13 - Create and delete user based on JSON payload",
+        "uid" : "70ab35e5a1b83507",
+        "parentUid" : "058a1c4968eb736a217a232f35dfea7a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1772023007873,
+          "stop" : 1772023007875,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "CT10 - Use variables for dynamic validations",
+        "uid" : "a11660c9b4acc48e",
+        "parentUid" : "058a1c4968eb736a217a232f35dfea7a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1772023008337,
+          "stop" : 1772023008339,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "058a1c4968eb736a217a232f35dfea7a"
+    }, {
+      "name" : "Classpath resource [/playwright_serverest/login/resources/invalido-login.csv] does not exist",
+      "children" : [ {
+        "name" : "CT03 - Validate required fields on login",
+        "uid" : "9eef9812a669d4b0",
+        "parentUid" : "8e3827823ff91f45de5ef0d1f31c7b2f",
+        "status" : "broken",
+        "time" : {
+          "start" : 1772023006877,
+          "stop" : 1772023006877,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "8e3827823ff91f45de5ef0d1f31c7b2f"
+    }, {
+      "name" : "Classpath resource [/playwright_serverest/login/invalid-login-emails.csv] does not exist",
+      "children" : [ {
+        "name" : "CT05 - Validate invalid email format",
+        "uid" : "fdc8006a74d1bfdd",
+        "parentUid" : "4d14b4b217d385b04022e1e4ce12fac0",
+        "status" : "broken",
+        "time" : {
+          "start" : 1772023006962,
+          "stop" : 1772023006962,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "4d14b4b217d385b04022e1e4ce12fac0"
+    }, {
+      "name" : "Resource not found: playwright_serverest/produtos/resources/productPayload.json",
+      "children" : [ {
+        "name" : "CT11 - Create a product from fixed JSON payload",
+        "uid" : "914c52aeb6bafdd7",
+        "parentUid" : "3a176106765a74006e14c27b4a0641b2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1772023011525,
+          "stop" : 1772023011675,
+          "duration" : 150
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "3a176106765a74006e14c27b4a0641b2"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

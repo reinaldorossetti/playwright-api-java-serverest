@@ -1,0 +1,64 @@
+{
+  "uid" : "7c604afdca09b098",
+  "name" : "CT08 - Prevent cart creation with non-existing product",
+  "fullName" : "playwright_serverest.carrinhos.CartsPlaywrightTest.ct08_preventCartCreationWithNonExistingProduct",
+  "historyId" : "55ee962228965d642d1c322d41a5878b",
+  "time" : {
+    "start" : 1772023009017,
+    "stop" : 1772023009298,
+    "duration" : 281
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "junit.platform.uniqueid",
+    "value" : "[engine:junit-jupiter]/[class:playwright_serverest.carrinhos.CartsPlaywrightTest]/[method:ct08_preventCartCreationWithNonExistingProduct()]"
+  }, {
+    "name" : "host",
+    "value" : "runnervmwffz4"
+  }, {
+    "name" : "thread",
+    "value" : "2440@runnervmwffz4.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "playwright_serverest.carrinhos.CartsPlaywrightTest"
+  }, {
+    "name" : "testClass",
+    "value" : "playwright_serverest.carrinhos.CartsPlaywrightTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "ct08_preventCartCreationWithNonExistingProduct"
+  }, {
+    "name" : "suite",
+    "value" : "playwright_serverest.carrinhos.CartsPlaywrightTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7c604afdca09b098.json",
+  "parameterValues" : [ ]
+}
