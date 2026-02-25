@@ -84,7 +84,7 @@ public class LoginPlaywrightTest extends BaseApiTest {
 
     @DisplayName("CT03 - Validate required fields on login")
     @ParameterizedTest(name = "CT03 - Validate required fields on login")
-    @CsvFileSource(resources = "/playwright_serverest/login/resources/invalido-login.csv", numLinesToSkip = 1)
+    @CsvFileSource(resources = "/playwright_serverest/login/invalido-login.csv", numLinesToSkip = 1)
     void ct03_validateRequiredFields() throws Exception {
         // 1) Empty email, filled password
         APIResponse resp1 = request.post("/login", RequestOptions.create()
