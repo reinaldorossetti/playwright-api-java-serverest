@@ -1,0 +1,64 @@
+{
+  "uid" : "bedbfae796b4b4c",
+  "name" : "CT08 - Validate required fields when creating a product CT08 - Validate required fields when creating a product",
+  "fullName" : "playwright_serverest.produtos.ProductsPlaywrightTest.ct08_validateRequiredFieldsWhenCreatingProduct",
+  "historyId" : "f31ec1b9997a33306faf332e1cc02d0e",
+  "time" : {
+    "start" : 1772025268584,
+    "stop" : 1772025268901,
+    "duration" : 317
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "junit.platform.uniqueid",
+    "value" : "[engine:junit-jupiter]/[class:playwright_serverest.produtos.ProductsPlaywrightTest]/[test-template:ct08_validateRequiredFieldsWhenCreatingProduct(int)]/[test-template-invocation:#3]"
+  }, {
+    "name" : "host",
+    "value" : "runnervmwffz4"
+  }, {
+    "name" : "thread",
+    "value" : "2403@runnervmwffz4.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "playwright_serverest.produtos.ProductsPlaywrightTest"
+  }, {
+    "name" : "testClass",
+    "value" : "playwright_serverest.produtos.ProductsPlaywrightTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "ct08_validateRequiredFieldsWhenCreatingProduct"
+  }, {
+    "name" : "suite",
+    "value" : "playwright_serverest.produtos.ProductsPlaywrightTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "bedbfae796b4b4c.json",
+  "parameterValues" : [ ]
+}

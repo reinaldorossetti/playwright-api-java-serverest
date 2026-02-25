@@ -5,9 +5,20 @@
     "name" : "playwright_serverest.usuarios.UsersPlaywrightTest",
     "statistic" : {
       "failed" : 0,
-      "broken" : 3,
+      "broken" : 0,
       "skipped" : 0,
-      "passed" : 13,
+      "passed" : 16,
+      "unknown" : 0,
+      "total" : 16
+    }
+  }, {
+    "uid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+    "name" : "playwright_serverest.produtos.ProductsPlaywrightTest",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 16,
       "unknown" : 0,
       "total" : 16
     }
@@ -16,22 +27,11 @@
     "name" : "playwright_serverest.login.LoginPlaywrightTest",
     "statistic" : {
       "failed" : 0,
-      "broken" : 2,
+      "broken" : 0,
       "skipped" : 0,
-      "passed" : 3,
+      "passed" : 12,
       "unknown" : 0,
-      "total" : 5
-    }
-  }, {
-    "uid" : "61f08fd524b8bd0d26422beafd2fc8fe",
-    "name" : "playwright_serverest.produtos.ProductsPlaywrightTest",
-    "statistic" : {
-      "failed" : 0,
-      "broken" : 1,
-      "skipped" : 0,
-      "passed" : 15,
-      "unknown" : 0,
-      "total" : 16
+      "total" : 12
     }
   }, {
     "uid" : "3c87a19f105b9d0053907132f9878d0a",
