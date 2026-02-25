@@ -2,15 +2,15 @@
 
 [![Playwright](https://img.shields.io/badge/Playwright-Java-45ba63.svg)](https://playwright.dev/java/)
 [![JUnit5](https://img.shields.io/badge/JUnit-5.10.1-green.svg)](https://junit.org/junit5/)
-[![Java](https://img.shields.io/badge/Java-21-orange.svg)](https://www.oracle.com/java/)
+[![Java](https://img.shields.io/badge/Java-17-orange.svg)](https://www.oracle.com/java/)
 
 Projeto de automação de testes de API utilizando **Microsoft Playwright para Java** para testar a API REST **ServeRest** - uma API gratuita que simula uma loja virtual.
 
 Projeto estruturado com boas práticas, exemplos de testes, validações avançadas e integração com JUnit 5 para execução e relatórios.
 
-URI do repositório: [https://github.com/reinaldorossetti/karate_api_java](https://github.com/reinaldorossetti/karate_api_java)
+URI do repositório: [https://github.com/reinaldorossetti/playwright-api-java-serverest](https://github.com/reinaldorossetti/playwright-api-java-serverest)
 
-Reporte na esteira: [https://reinaldorossetti.github.io/karate_api_java/allure-reports/index.html](https://reinaldorossetti.github.io/karate_api_java/allure-reports/index.html)
+Reporte na esteira: [https://reinaldorossetti.github.io/playwright-api-java-serverest/allure-reports/index.html](https://reinaldorossetti.github.io/playwright-api-java-serverest/allure-reports/index.html)
 
 Testes realizados na API: [TESTING_API.MD](TESTING_API.MD)
 
@@ -87,7 +87,7 @@ https://serverest.dev
 ## 📁 Estrutura do Projeto
 
 ```
-karate_api_java/
+playwright-api-java-serverest/
 │
 ├── src/
 │   ├── main/
@@ -119,21 +119,21 @@ karate_api_java/
 │               └── produtos/resources/productPayload.json
 │
 ├── pom.xml                               # Dependências Maven
-└── readme-playwright.MD                  # Este arquivo
+└── readme.MD                             # Este arquivo
 ```
 
 ---
 
 ## 🔧 Pré-requisitos
 
-- **Java JDK 21** (LTS) ou superior
+- **Java JDK 17** (LTS) ou superior
 - **Maven 3.6+**
 - **IDE** (IntelliJ IDEA, Eclipse, VS Code)
 - Conexão com internet (para acessar a API ServeRest)
 
-### Download do Java 21
+### Download do Java 17
 
-- Oracle JDK 21: https://www.oracle.com/java/technologies/downloads/#java21
+- Oracle JDK 17: https://www.oracle.com/java/technologies/downloads/#java17
 
 ### Verificar instalação
 
@@ -148,7 +148,7 @@ mvn -version
 
 | Componente                         | Artefato                                           | Versão  |
 |------------------------------------|----------------------------------------------------|---------|
-| Playwright Java                    | com.microsoft.playwright:playwright                | 1.49.0  |
+| Playwright Java                    | com.microsoft.playwright:playwright                | 1.58.0  |
 | JUnit 5 (Jupiter API)             | org.junit.jupiter:junit-jupiter-api                | 5.10.1  |
 | JUnit 5 (Jupiter Engine)          | org.junit.jupiter:junit-jupiter-engine             | 5.10.1  |
 | JUnit 5 (Jupiter Params)          | org.junit.jupiter:junit-jupiter-params             | 5.10.1  |
@@ -165,8 +165,8 @@ mvn -version
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/reinaldorossetti/karate_api_java.git
-cd karate_api_java
+git clone https://github.com/reinaldorossetti/playwright-api-java-serverest.git
+cd playwright-api-java-serverest
 ```
 
 ### 2. Instale as dependências
@@ -222,7 +222,7 @@ junit.jupiter.execution.parallel.config.dynamic.factor=2
 
 Este projeto possui integração contínua configurada no GitHub Actions em:
 
-- Arquivo: `.github/workflows/api-tests.yml`
+- Arquivo: `.github/workflows/ci.yml`
 
 ### 🔁 Quando a esteira é executada
 
@@ -233,12 +233,12 @@ Este projeto possui integração contínua configurada no GitHub Actions em:
 
 1. **Checkout do código**
    - `actions/checkout@v4`
-2. **Configuração do Java 21**
+2. **Configuração do Java 17**
    - `actions/setup-java@v5` com:
      - `java-version: '21'`
      - `distribution: 'temurin'`
 3. **Execução dos testes via Maven**
-   - Comando sugerido para Playwright API: `mvn clean -Dtest=playwright_serverest.ExecutionBuilderRunner test`
+    - Comando sugerido para Playwright API: `mvn -B clean test`
 4. **Publicação de relatórios Allure**
    - Publica `target/allure-report` via `peaceiris/actions-gh-pages@v4` na branch `gh-pages`, pasta `allure-reports`.
 
@@ -247,7 +247,7 @@ Este projeto possui integração contínua configurada no GitHub Actions em:
 Após a execução da esteira:
 
 - URL do relatório:
-  - `https://reinaldorossetti.github.io/karate_api_java/allure-reports/index.html`
+    - `https://reinaldorossetti.github.io/playwright-api-java-serverest/allure-reports/index.html`
 
 ---
 

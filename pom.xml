@@ -114,7 +114,7 @@
                     <parallel>per_class</parallel>
                     <threadCount>6</threadCount>
                     <perCoreThreadCount>true</perCoreThreadCount>
-                    <forkCount>1C</forkCount>
+                    <forkCount>2C</forkCount>
                     <reuseForks>true</reuseForks>
                 </configuration>
             </plugin>

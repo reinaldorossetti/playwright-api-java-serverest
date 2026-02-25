@@ -1,5 +1,7 @@
 package playwright_serverest.utils;
 
+import java.util.UUID;
+
 import com.github.javafaker.Faker;
 
 /**
@@ -18,7 +20,9 @@ public class FakerUtils {
     }
 
     public static String randomEmail() {
-        return FAKER.name().firstName().toLowerCase() + "@gmail.com";
+        String firstName = FAKER.name().firstName().toLowerCase().replaceAll("[^a-z0-9]", "");
+        String suffix = UUID.randomUUID().toString().replace("-", "").substring(0, 8);
+        return firstName + "." + suffix + "@gmail.com";
     }
 
     public static String randomPassword() {
