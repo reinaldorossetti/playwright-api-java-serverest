@@ -1,6 +1,0 @@
-{
-  "nome": "Product JSON Fixo",
-  "preco": 199,
-  "descricao": "Produto criado a partir de payload JSON fixo",
-  "quantidade": 20
-}

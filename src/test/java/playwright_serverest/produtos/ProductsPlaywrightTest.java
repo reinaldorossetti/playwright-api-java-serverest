@@ -366,7 +366,7 @@ public class ProductsPlaywrightTest extends BaseApiTest {
     void ct11_createProductFromFixedJsonPayload() throws Exception {
         String token = getAdminToken();
 
-        Map<String, Object> productPayload = loadJsonResource("playwright_serverest/produtos/resources/productPayload.json");
+                Map<String, Object> productPayload = loadJsonResource("playwright_serverest/produtos/resources/productPayload.json");
         productPayload.put("nome", "Product " + System.currentTimeMillis());
 
         APIResponse resp = request.post("/produtos", RequestOptions.create()
