@@ -22,8 +22,7 @@
         <jackson.version>2.17.0</jackson.version>
         <javafaker.version>1.0.2</javafaker.version>
         <surefire.version>3.2.5</surefire.version>
-        <allure.version>2.29.1</allure.version>
-        <allure.maven.version>2.12.0</allure.maven.version>
+        <allure.version>2.17.0</allure.version>
     </properties>
 
     <dependencies>
@@ -117,21 +116,13 @@
                     <perCoreThreadCount>true</perCoreThreadCount>
                     <forkCount>1C</forkCount>
                     <reuseForks>true</reuseForks>
-                    <properties>
-                        <configurationParameters>
-                            junit.jupiter.execution.parallel.enabled=true
-                            junit.jupiter.execution.parallel.config.strategy=dynamic
-                            junit.jupiter.execution.parallel.mode.default=same_thread
-                            junit.jupiter.execution.parallel.mode.classes.default=concurrent
-                        </configurationParameters>
-                    </properties>
                 </configuration>
             </plugin>
 
             <plugin>
                 <groupId>io.qameta.allure</groupId>
                 <artifactId>allure-maven</artifactId>
-                <version>${allure.maven.version}</version>
+                <version>${allure.version}</version>
                 <configuration>
                     <reportVersion>${allure.version}</reportVersion>
                     <resultsDirectory>${project.build.directory}/allure-results</resultsDirectory>

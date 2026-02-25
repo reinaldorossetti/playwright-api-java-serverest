@@ -1,0 +1,73 @@
+name: Java CI - Playwright API Tests
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+    branches:
+      - "**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+
+      - name: Show Java and Maven versions
+        run: |
+          java -version
+          mvn -version
+
+      - name: Run tests
+        run: mvn -B clean test
+
+      - name: Upload Surefire reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: surefire-reports
+          path: target/surefire-reports
+          if-no-files-found: warn
+
+        continue-on-error: true
+
+      - name: Generate Allure report
+        run: mvn -B allure:report
+        continue-on-error: true
+
+      - name: Upload Allure report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: target/allure-report
+          if-no-files-found: warn
+
+      - name: Add .nojekyll to report
+        if: always()
+        run: |
+          mkdir -p target/allure-report
+          touch target/allure-report/.nojekyll
+
+      - name: Deploy Allure report to gh-pages
+        if: always() && github.event_name == 'push'
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: target/allure-report
+          destination_dir: allure-reports
+          keep_files: true
