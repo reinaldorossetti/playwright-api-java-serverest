@@ -1,0 +1,64 @@
+{
+  "uid" : "6e9ffd3bb606f248",
+  "name" : "CT14 - Prevent deleting user that has an associated cart",
+  "fullName" : "playwright_serverest.usuarios.UsersPlaywrightTest.ct14_preventDeletingUserThatHasAssociatedCart",
+  "historyId" : "3b0682710c47083ff7f1fac5e7754266",
+  "time" : {
+    "start" : 1772023732330,
+    "stop" : 1772023732768,
+    "duration" : 438
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "junit.platform.uniqueid",
+    "value" : "[engine:junit-jupiter]/[class:playwright_serverest.usuarios.UsersPlaywrightTest]/[method:ct14_preventDeletingUserThatHasAssociatedCart()]"
+  }, {
+    "name" : "host",
+    "value" : "runnervmwffz4"
+  }, {
+    "name" : "thread",
+    "value" : "2437@runnervmwffz4.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "playwright_serverest.usuarios.UsersPlaywrightTest"
+  }, {
+    "name" : "testClass",
+    "value" : "playwright_serverest.usuarios.UsersPlaywrightTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "ct14_preventDeletingUserThatHasAssociatedCart"
+  }, {
+    "name" : "suite",
+    "value" : "playwright_serverest.usuarios.UsersPlaywrightTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "6e9ffd3bb606f248.json",
+  "parameterValues" : [ ]
+}

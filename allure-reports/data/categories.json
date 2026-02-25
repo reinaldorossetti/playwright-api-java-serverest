@@ -4,70 +4,15 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "Resource not found: playwright_serverest/usuarios/resources/userPayload.json",
-      "children" : [ {
-        "name" : "CT12 - Create a user from fixed JSON file",
-        "uid" : "861670d7d0c92c55",
-        "parentUid" : "058a1c4968eb736a217a232f35dfea7a",
-        "status" : "broken",
-        "time" : {
-          "start" : 1772023006831,
-          "stop" : 1772023006840,
-          "duration" : 9
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "CT13 - Create and delete user based on JSON payload",
-        "uid" : "70ab35e5a1b83507",
-        "parentUid" : "058a1c4968eb736a217a232f35dfea7a",
-        "status" : "broken",
-        "time" : {
-          "start" : 1772023007873,
-          "stop" : 1772023007875,
-          "duration" : 2
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "CT10 - Use variables for dynamic validations",
-        "uid" : "a11660c9b4acc48e",
-        "parentUid" : "058a1c4968eb736a217a232f35dfea7a",
-        "status" : "broken",
-        "time" : {
-          "start" : 1772023008337,
-          "stop" : 1772023008339,
-          "duration" : 2
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "058a1c4968eb736a217a232f35dfea7a"
-    }, {
-      "name" : "Classpath resource [/playwright_serverest/login/resources/invalido-login.csv] does not exist",
+      "name" : "Classpath resource [/playwright_serverest/login/invalido-login.csv] does not exist",
       "children" : [ {
         "name" : "CT03 - Validate required fields on login",
-        "uid" : "9eef9812a669d4b0",
-        "parentUid" : "8e3827823ff91f45de5ef0d1f31c7b2f",
+        "uid" : "2d9f1c7b934103ab",
+        "parentUid" : "62a81a75d20a2552a698ccbc1bb6ef60",
         "status" : "broken",
         "time" : {
-          "start" : 1772023006877,
-          "stop" : 1772023006877,
+          "start" : 1772023727234,
+          "stop" : 1772023727234,
           "duration" : 0
         },
         "flaky" : false,
@@ -78,17 +23,17 @@
         "retriesStatusChange" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "8e3827823ff91f45de5ef0d1f31c7b2f"
+      "uid" : "62a81a75d20a2552a698ccbc1bb6ef60"
     }, {
       "name" : "Classpath resource [/playwright_serverest/login/invalid-login-emails.csv] does not exist",
       "children" : [ {
         "name" : "CT05 - Validate invalid email format",
-        "uid" : "fdc8006a74d1bfdd",
+        "uid" : "a225dfb837ec861",
         "parentUid" : "4d14b4b217d385b04022e1e4ce12fac0",
         "status" : "broken",
         "time" : {
-          "start" : 1772023006962,
-          "stop" : 1772023006962,
+          "start" : 1772023727346,
+          "stop" : 1772023727346,
           "duration" : 0
         },
         "flaky" : false,
@@ -104,13 +49,13 @@
       "name" : "Resource not found: playwright_serverest/produtos/resources/productPayload.json",
       "children" : [ {
         "name" : "CT11 - Create a product from fixed JSON payload",
-        "uid" : "914c52aeb6bafdd7",
+        "uid" : "2c083fb14bdd6616",
         "parentUid" : "3a176106765a74006e14c27b4a0641b2",
         "status" : "broken",
         "time" : {
-          "start" : 1772023011525,
-          "stop" : 1772023011675,
-          "duration" : 150
+          "start" : 1772023728366,
+          "stop" : 1772023728513,
+          "duration" : 147
         },
         "flaky" : false,
         "newFailed" : false,
@@ -121,6 +66,61 @@
         "parameters" : [ ]
       } ],
       "uid" : "3a176106765a74006e14c27b4a0641b2"
+    }, {
+      "name" : "Resource not found: playwright_serverest/usuarios/resources/userPayload.json",
+      "children" : [ {
+        "name" : "CT12 - Create a user from fixed JSON file",
+        "uid" : "e6312d303d1f02b2",
+        "parentUid" : "058a1c4968eb736a217a232f35dfea7a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1772023730861,
+          "stop" : 1772023730870,
+          "duration" : 9
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "CT13 - Create and delete user based on JSON payload",
+        "uid" : "cf23c29236a1ec9",
+        "parentUid" : "058a1c4968eb736a217a232f35dfea7a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1772023731902,
+          "stop" : 1772023731904,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "CT10 - Use variables for dynamic validations",
+        "uid" : "43e25c2ca879d03d",
+        "parentUid" : "058a1c4968eb736a217a232f35dfea7a",
+        "status" : "broken",
+        "time" : {
+          "start" : 1772023732326,
+          "stop" : 1772023732328,
+          "duration" : 2
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "058a1c4968eb736a217a232f35dfea7a"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ]

@@ -1,0 +1,70 @@
+{
+  "uid" : "2c083fb14bdd6616",
+  "name" : "CT11 - Create a product from fixed JSON payload",
+  "fullName" : "playwright_serverest.produtos.ProductsPlaywrightTest.ct11_createProductFromFixedJsonPayload",
+  "historyId" : "ea0d09b380d6d3aa422300f80b525756",
+  "time" : {
+    "start" : 1772023728366,
+    "stop" : 1772023728513,
+    "duration" : 147
+  },
+  "description" : "",
+  "status" : "broken",
+  "statusMessage" : "Resource not found: playwright_serverest/produtos/resources/productPayload.json",
+  "statusTrace" : "java.lang.IllegalStateException: Resource not found: playwright_serverest/produtos/resources/productPayload.json\n\tat playwright_serverest.BaseApiTest.loadJsonResource(BaseApiTest.java:72)\n\tat playwright_serverest.produtos.ProductsPlaywrightTest.ct11_createProductFromFixedJsonPayload(ProductsPlaywrightTest.java:369)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:569)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n\tat java.base/java.util.ArrayList.forEach(ArrayList.java:1511)\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "junit.platform.uniqueid",
+    "value" : "[engine:junit-jupiter]/[class:playwright_serverest.produtos.ProductsPlaywrightTest]/[method:ct11_createProductFromFixedJsonPayload()]"
+  }, {
+    "name" : "host",
+    "value" : "runnervmwffz4"
+  }, {
+    "name" : "thread",
+    "value" : "2439@runnervmwffz4.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "playwright_serverest.produtos.ProductsPlaywrightTest"
+  }, {
+    "name" : "testClass",
+    "value" : "playwright_serverest.produtos.ProductsPlaywrightTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "ct11_createProductFromFixedJsonPayload"
+  }, {
+    "name" : "suite",
+    "value" : "playwright_serverest.produtos.ProductsPlaywrightTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "2c083fb14bdd6616.json",
+  "parameterValues" : [ ]
+}

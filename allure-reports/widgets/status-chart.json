@@ -1,450 +1,450 @@
 [ {
-  "uid" : "861670d7d0c92c55",
-  "name" : "CT12 - Create a user from fixed JSON file",
+  "uid" : "c82b9723751fa057",
+  "name" : "CT04 - Prevent creating more than one cart for the same user",
   "time" : {
-    "start" : 1772023006831,
-    "stop" : 1772023006840,
-    "duration" : 9
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "6ecdb016cd17e9a9",
-  "name" : "CT01 - List all products and validate JSON structure",
-  "time" : {
-    "start" : 1772023013208,
-    "stop" : 1772023013295,
-    "duration" : 87
+    "start" : 1772023728248,
+    "stop" : 1772023728679,
+    "duration" : 431
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "ae28218232777d14",
-  "name" : "CT01 - Perform login with valid credentials and validate token",
+  "uid" : "a8b37569448cce5",
+  "name" : "CT02 - Get a specific user by ID",
   "time" : {
-    "start" : 1772023006681,
-    "stop" : 1772023006839,
-    "duration" : 158
+    "start" : 1772023731395,
+    "stop" : 1772023731606,
+    "duration" : 211
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "42b7f8beb883a2f1",
-  "name" : "CT05 - Validate error messages when creating a duplicate email",
+  "uid" : "9761f856674298bb",
+  "name" : "CT08 - Validate required fields when creating a product CT08 - Validate required fields when creating a product",
   "time" : {
-    "start" : 1772023005652,
-    "stop" : 1772023006576,
-    "duration" : 924
+    "start" : 1772023728597,
+    "stop" : 1772023728833,
+    "duration" : 236
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "7911408f64583393",
-  "name" : "CT04 - Search for products using query parameters",
+  "uid" : "7a03d62300a7447c",
+  "name" : "CT06 - Prevent cart creation when product stock is insufficient",
   "time" : {
-    "start" : 1772023013663,
-    "stop" : 1772023013803,
-    "duration" : 140
+    "start" : 1772023727454,
+    "stop" : 1772023727821,
+    "duration" : 367
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "242ccbff76f2b202",
+  "uid" : "70c117cb3eb907ea",
+  "name" : "CT15 - Get user by invalid ID should return 400",
+  "time" : {
+    "start" : 1772023730874,
+    "stop" : 1772023730949,
+    "duration" : 75
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3bd15356fbdca955",
   "name" : "CT07 - Attempt to create a product without an authentication token",
   "time" : {
-    "start" : 1772023011680,
-    "stop" : 1772023011745,
+    "start" : 1772023728516,
+    "stop" : 1772023728581,
     "duration" : 65
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "1720278185d7e8ba",
-  "name" : "CT01 - Full cart lifecycle for authenticated user",
+  "uid" : "43e25c2ca879d03d",
+  "name" : "CT10 - Use variables for dynamic validations",
   "time" : {
-    "start" : 1772023005777,
-    "stop" : 1772023007040,
-    "duration" : 1263
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "343a869a9ab3a3d8",
-  "name" : "CT03 - Validate error when creating a product with a duplicate name",
-  "time" : {
-    "start" : 1772023013382,
-    "stop" : 1772023013662,
-    "duration" : 280
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "6b826ca962364650",
-  "name" : "CT03 - Prevent creating cart without authentication token",
-  "time" : {
-    "start" : 1772023007882,
-    "stop" : 1772023007968,
-    "duration" : 86
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "86253c27039d1cb3",
-  "name" : "CT03 - Create a new user with complete validations",
-  "time" : {
-    "start" : 1772023007212,
-    "stop" : 1772023007358,
-    "duration" : 146
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "d894d60cbe110e9b",
-  "name" : "CT04 - Advanced JSON validations with filters",
-  "time" : {
-    "start" : 1772023006918,
-    "stop" : 1772023007075,
-    "duration" : 157
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "dc23c2d243b12fe9",
-  "name" : "CT15 - Get user by invalid ID should return 400",
-  "time" : {
-    "start" : 1772023006845,
-    "stop" : 1772023006915,
-    "duration" : 70
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "7646be1d6569b335",
-  "name" : "CT08 - Validate required fields when creating a product CT08 - Validate required fields when creating a product",
-  "time" : {
-    "start" : 1772023012427,
-    "stop" : 1772023012641,
-    "duration" : 214
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "fdc8006a74d1bfdd",
-  "name" : "CT05 - Validate invalid email format",
-  "time" : {
-    "start" : 1772023006962,
-    "stop" : 1772023006962,
-    "duration" : 0
+    "start" : 1772023732326,
+    "stop" : 1772023732328,
+    "duration" : 2
   },
   "status" : "broken",
   "severity" : "normal"
 }, {
-  "uid" : "a6a73aa0e2848daf",
-  "name" : "CT16 - Prevent updating user with duplicate e-mail",
+  "uid" : "674bd3790e0b37e2",
+  "name" : "CT01 - List all products and validate JSON structure",
   "time" : {
-    "start" : 1772023008094,
-    "stop" : 1772023008335,
-    "duration" : 241
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "8aed23a9290f2e71",
-  "name" : "CT06 - Validate price calculations and comparisons",
-  "time" : {
-    "start" : 1772023013297,
-    "stop" : 1772023013380,
-    "duration" : 83
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "4a84be7b24dbc77",
-  "name" : "CT12 - Prevent deleting a product that is part of a cart",
-  "time" : {
-    "start" : 1772023009453,
-    "stop" : 1772023010038,
-    "duration" : 585
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "216a8b48b75b2ead",
-  "name" : "CT05 - Cart not found by ID",
-  "time" : {
-    "start" : 1772023008470,
-    "stop" : 1772023008553,
-    "duration" : 83
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "142040acc4a7937a",
-  "name" : "CT02 - Get a specific user by ID",
-  "time" : {
-    "start" : 1772023007360,
-    "stop" : 1772023007562,
-    "duration" : 202
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "9eef9812a669d4b0",
-  "name" : "CT03 - Validate required fields on login",
-  "time" : {
-    "start" : 1772023006877,
-    "stop" : 1772023006877,
-    "duration" : 0
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "9c0ef665ce5c6666",
-  "name" : "CT08 - Validate required fields when creating a product CT08 - Validate required fields when creating a product",
-  "time" : {
-    "start" : 1772023012880,
-    "stop" : 1772023013105,
-    "duration" : 225
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "1b402db4136e142f",
-  "name" : "CT11 - Prepare data for nested object validation",
-  "time" : {
-    "start" : 1772023008013,
-    "stop" : 1772023008092,
+    "start" : 1772023729580,
+    "stop" : 1772023729659,
     "duration" : 79
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "aba281128d212b8",
-  "name" : "CT01 - List all users and validate JSON structure",
+  "uid" : "c152410c9cfc7bdc",
+  "name" : "CT03 - Create a new user with complete validations",
   "time" : {
-    "start" : 1772023006637,
-    "stop" : 1772023006826,
-    "duration" : 189
+    "start" : 1772023731242,
+    "stop" : 1772023731393,
+    "duration" : 151
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "c3f0c2268ed44d2a",
-  "name" : "CT08 - Validate formats with regular expressions",
+  "uid" : "8841f024a82a9451",
+  "name" : "CT08 - Validate required fields when creating a product CT08 - Validate required fields when creating a product",
   "time" : {
-    "start" : 1772023007564,
-    "stop" : 1772023007739,
-    "duration" : 175
+    "start" : 1772023728837,
+    "stop" : 1772023729051,
+    "duration" : 214
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "aa82b06db2c1c43c",
-  "name" : "CT07 - Prevent cart creation with duplicated products in the same cart",
+  "uid" : "49dc285f8e704454",
+  "name" : "CT03 - Prevent creating cart without authentication token",
   "time" : {
-    "start" : 1772023007485,
-    "stop" : 1772023007878,
-    "duration" : 393
+    "start" : 1772023728179,
+    "stop" : 1772023728245,
+    "duration" : 66
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "5467a464da00abd5",
+  "uid" : "3e36c4f8c39fbf14",
   "name" : "CT09 - Validate absence of fields",
   "time" : {
-    "start" : 1772023007741,
-    "stop" : 1772023007870,
-    "duration" : 129
+    "start" : 1772023731766,
+    "stop" : 1772023731899,
+    "duration" : 133
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "8bb9234695038343",
-  "name" : "CT09 - Work with complex JSON data",
+  "uid" : "48feb8c3ddedd8d2",
+  "name" : "CT04 - Advanced JSON validations with filters",
   "time" : {
-    "start" : 1772023013108,
-    "stop" : 1772023013205,
-    "duration" : 97
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "caf98ea2f3e05017",
-  "name" : "CT06 - Validate with fuzzy matching",
-  "time" : {
-    "start" : 1772023007082,
-    "stop" : 1772023007209,
-    "duration" : 127
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "914c52aeb6bafdd7",
-  "name" : "CT11 - Create a product from fixed JSON payload",
-  "time" : {
-    "start" : 1772023011525,
-    "stop" : 1772023011675,
+    "start" : 1772023730952,
+    "stop" : 1772023731102,
     "duration" : 150
   },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ffabe052f080043",
+  "name" : "CT01 - List all users and validate JSON structure",
+  "time" : {
+    "start" : 1772023730694,
+    "stop" : 1772023730857,
+    "duration" : 163
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a225dfb837ec861",
+  "name" : "CT05 - Validate invalid email format",
+  "time" : {
+    "start" : 1772023727346,
+    "stop" : 1772023727346,
+    "duration" : 0
+  },
   "status" : "broken",
   "severity" : "normal"
 }, {
-  "uid" : "827f74328ba754ac",
+  "uid" : "6e9ffd3bb606f248",
   "name" : "CT14 - Prevent deleting user that has an associated cart",
   "time" : {
-    "start" : 1772023008341,
-    "stop" : 1772023008792,
-    "duration" : 451
+    "start" : 1772023732330,
+    "stop" : 1772023732768,
+    "duration" : 438
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "4596568438a1613e",
-  "name" : "CT06 - Prevent cart creation when product stock is insufficient",
-  "time" : {
-    "start" : 1772023007101,
-    "stop" : 1772023007480,
-    "duration" : 379
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "8d00fc210e21ca05",
-  "name" : "CT04 - Prevent creating more than one cart for the same user",
-  "time" : {
-    "start" : 1772023007971,
-    "stop" : 1772023008465,
-    "duration" : 494
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "bf1a89da9457684e",
-  "name" : "CT10 - Delete an existing product",
-  "time" : {
-    "start" : 1772023011165,
-    "stop" : 1772023011523,
-    "duration" : 358
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "a11660c9b4acc48e",
-  "name" : "CT10 - Use variables for dynamic validations",
-  "time" : {
-    "start" : 1772023008337,
-    "stop" : 1772023008339,
-    "duration" : 2
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "3fea9ecb68e3cc8d",
+  "uid" : "8f5cdec663ee79db",
   "name" : "CT08 - Validate required fields when creating a product CT08 - Validate required fields when creating a product",
   "time" : {
-    "start" : 1772023011840,
-    "stop" : 1772023012423,
-    "duration" : 583
+    "start" : 1772023729054,
+    "stop" : 1772023729276,
+    "duration" : 222
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "3ad96d2c29572399",
-  "name" : "CT07 - Conditional validations based on values",
+  "uid" : "385c617a1c4f1fa4",
+  "name" : "CT06 - Validate price calculations and comparisons",
   "time" : {
-    "start" : 1772023007877,
-    "stop" : 1772023008011,
-    "duration" : 134
+    "start" : 1772023729660,
+    "stop" : 1772023729744,
+    "duration" : 84
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "70ab35e5a1b83507",
-  "name" : "CT13 - Create and delete user based on JSON payload",
+  "uid" : "ad6d0bcf2d207b2c",
+  "name" : "CT13 - Restrict product creation to administrators only",
   "time" : {
-    "start" : 1772023007873,
-    "stop" : 1772023007875,
-    "duration" : 2
-  },
-  "status" : "broken",
-  "severity" : "normal"
-}, {
-  "uid" : "ddd2754951d242fd",
-  "name" : "CT08 - Validate required fields when creating a product CT08 - Validate required fields when creating a product",
-  "time" : {
-    "start" : 1772023012644,
-    "stop" : 1772023012878,
-    "duration" : 234
+    "start" : 1772023726413,
+    "stop" : 1772023727068,
+    "duration" : 655
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "767d91587d19e45a",
+  "uid" : "bb95d761ab2566cb",
+  "name" : "CT11 - Prepare data for nested object validation",
+  "time" : {
+    "start" : 1772023732028,
+    "stop" : 1772023732104,
+    "duration" : 76
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "db0a6c671f341793",
+  "name" : "CT05 - Cart not found by ID",
+  "time" : {
+    "start" : 1772023728682,
+    "stop" : 1772023728749,
+    "duration" : 67
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c67166a3dbfb81c2",
   "name" : "CT02 - Create a new product as an administrator",
   "time" : {
-    "start" : 1772023010042,
-    "stop" : 1772023011162,
-    "duration" : 1120
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "38668567bb1ea20d",
-  "name" : "CT02 - Cancel purchase and return products to stock",
-  "time" : {
-    "start" : 1772023008561,
-    "stop" : 1772023009014,
-    "duration" : 453
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "7c604afdca09b098",
-  "name" : "CT08 - Prevent cart creation with non-existing product",
-  "time" : {
-    "start" : 1772023009017,
-    "stop" : 1772023009298,
+    "start" : 1772023727735,
+    "stop" : 1772023728016,
     "duration" : 281
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "36bf9a1a362b0a67",
-  "name" : "CT13 - Restrict product creation to administrators only",
+  "uid" : "2d9f1c7b934103ab",
+  "name" : "CT03 - Validate required fields on login",
   "time" : {
-    "start" : 1772023009089,
-    "stop" : 1772023009421,
-    "duration" : 332
+    "start" : 1772023727234,
+    "stop" : 1772023727234,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "ebe990efe18c0b98",
+  "name" : "CT01 - Perform login with valid credentials and validate token",
+  "time" : {
+    "start" : 1772023727038,
+    "stop" : 1772023727204,
+    "duration" : 166
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "c1eeee3c3aedbbd3",
-  "name" : "CT04 - Login and use token to access a protected resource",
+  "uid" : "2c083fb14bdd6616",
+  "name" : "CT11 - Create a product from fixed JSON payload",
   "time" : {
-    "start" : 1772023005678,
-    "stop" : 1772023006646,
-    "duration" : 968
+    "start" : 1772023728366,
+    "stop" : 1772023728513,
+    "duration" : 147
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "b0d6d53a5388406b",
+  "name" : "CT04 - Search for products using query parameters",
+  "time" : {
+    "start" : 1772023730029,
+    "stop" : 1772023730159,
+    "duration" : 130
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "7f98993aecd55017",
+  "uid" : "6a4f8b6f563bf5",
+  "name" : "CT08 - Validate formats with regular expressions",
+  "time" : {
+    "start" : 1772023731608,
+    "stop" : 1772023731764,
+    "duration" : 156
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6b15610ccf9f9066",
+  "name" : "CT08 - Validate required fields when creating a product CT08 - Validate required fields when creating a product",
+  "time" : {
+    "start" : 1772023729279,
+    "stop" : 1772023729485,
+    "duration" : 206
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "be65e5ab8913a3ac",
+  "name" : "CT08 - Prevent cart creation with non-existing product",
+  "time" : {
+    "start" : 1772023729189,
+    "stop" : 1772023729466,
+    "duration" : 277
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "40f1625724899641",
   "name" : "CT05 - Update information of an existing product",
   "time" : {
-    "start" : 1772023013807,
-    "stop" : 1772023014189,
-    "duration" : 382
+    "start" : 1772023730164,
+    "stop" : 1772023730702,
+    "duration" : 538
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "a80d89f3a6a42fb9",
+  "uid" : "9db081790a601315",
+  "name" : "CT07 - Prevent cart creation with duplicated products in the same cart",
+  "time" : {
+    "start" : 1772023727824,
+    "stop" : 1772023728176,
+    "duration" : 352
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3e66fc23d52591e7",
+  "name" : "CT09 - Work with complex JSON data",
+  "time" : {
+    "start" : 1772023729489,
+    "stop" : 1772023729578,
+    "duration" : 89
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7cf0dc792bb395e6",
+  "name" : "CT04 - Login and use token to access a protected resource",
+  "time" : {
+    "start" : 1772023726121,
+    "stop" : 1772023727003,
+    "duration" : 882
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5c8aaf8c95576d1a",
+  "name" : "CT01 - Full cart lifecycle for authenticated user",
+  "time" : {
+    "start" : 1772023726427,
+    "stop" : 1772023727416,
+    "duration" : 989
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "df23fd4904a415d6",
+  "name" : "CT03 - Validate error when creating a product with a duplicate name",
+  "time" : {
+    "start" : 1772023729746,
+    "stop" : 1772023730027,
+    "duration" : 281
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9bab2c16a06e0a61",
+  "name" : "CT16 - Prevent updating user with duplicate e-mail",
+  "time" : {
+    "start" : 1772023732106,
+    "stop" : 1772023732324,
+    "duration" : 218
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "7cd98f1a50d8431c",
+  "name" : "CT12 - Prevent deleting a product that is part of a cart",
+  "time" : {
+    "start" : 1772023727116,
+    "stop" : 1772023727732,
+    "duration" : 616
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3639b9fee953dab0",
+  "name" : "CT07 - Conditional validations based on values",
+  "time" : {
+    "start" : 1772023731906,
+    "stop" : 1772023732025,
+    "duration" : 119
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fe2b243aef10f98a",
+  "name" : "CT05 - Validate error messages when creating a duplicate email",
+  "time" : {
+    "start" : 1772023730343,
+    "stop" : 1772023730663,
+    "duration" : 320
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8a566ba1e56b9c3",
+  "name" : "CT10 - Delete an existing product",
+  "time" : {
+    "start" : 1772023728018,
+    "stop" : 1772023728363,
+    "duration" : 345
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "cf23c29236a1ec9",
+  "name" : "CT13 - Create and delete user based on JSON payload",
+  "time" : {
+    "start" : 1772023731902,
+    "stop" : 1772023731904,
+    "duration" : 2
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "e6312d303d1f02b2",
+  "name" : "CT12 - Create a user from fixed JSON file",
+  "time" : {
+    "start" : 1772023730861,
+    "stop" : 1772023730870,
+    "duration" : 9
+  },
+  "status" : "broken",
+  "severity" : "normal"
+}, {
+  "uid" : "b19313e5a333f20e",
+  "name" : "CT06 - Validate with fuzzy matching",
+  "time" : {
+    "start" : 1772023731105,
+    "stop" : 1772023731240,
+    "duration" : 135
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d0b1306b721d4424",
   "name" : "CT02 - Attempt login with invalid credentials",
   "time" : {
-    "start" : 1772023006881,
-    "stop" : 1772023006954,
-    "duration" : 73
+    "start" : 1772023727239,
+    "stop" : 1772023727337,
+    "duration" : 98
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "10f4e29db1881c8f",
+  "name" : "CT02 - Cancel purchase and return products to stock",
+  "time" : {
+    "start" : 1772023728752,
+    "stop" : 1772023729186,
+    "duration" : 434
   },
   "status" : "passed",
   "severity" : "normal"
