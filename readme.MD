@@ -192,7 +192,7 @@ var body = parseResponseBody(response);
 
 - Prefira `text block` para JSON multilinha em testes.
 - Use `switch expression` em cenários de dados dirigidos por parâmetros.
-- Use `var` apenas quando o tipo ficar óbvio pelo contexto.
+- Use `var` apenas quando o tipo estar óbvio de acordo com o contexto.
 - Mantenha compatibilidade com Java 17 para execução local e CI.
 
 ---
