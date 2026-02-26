@@ -80,14 +80,14 @@ public class UsersPlaywrightTest extends BaseApiTest {
         String name = FakerUtils.randomName();
         String password = FakerUtils.randomPassword();
 
-        String payload = String.format(
-                "{\n" +
-                        "  \"nome\": \"%s\",\n" +
-                        "  \"email\": \"%s\",\n" +
-                        "  \"password\": \"%s\",\n" +
-                        "  \"administrador\": \"true\"\n" +
-                        "}",
-                name, email, password);
+        String payload = String.format("""
+                {
+                  "nome": "%s",
+                  "email": "%s",
+                  "password": "%s",
+                  "administrador": "true"
+                }
+                """, name, email, password);
 
         APIResponse createResp = request.post("/usuarios", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -121,7 +121,7 @@ public class UsersPlaywrightTest extends BaseApiTest {
         List<Map<String, Object>> admins = usuarios.stream()
                 .filter(u -> "true".equals(u.get("administrador")))
                 .collect(Collectors.toList());
-        assertTrue(admins.size() > 0, "There should be at least one admin user");
+        assertTrue(!admins.isEmpty(), "There should be at least one admin user");
 
         for (Map<String, Object> user : usuarios) {
             assertNotNull(user.get("email"));
@@ -133,28 +133,28 @@ public class UsersPlaywrightTest extends BaseApiTest {
     void ct05_duplicateEmailValidation() throws Exception {
         String duplicateEmail = FakerUtils.randomEmail();
 
-        String user1 = String.format(
-                "{\n" +
-                        "  \"nome\": \"User 1\",\n" +
-                        "  \"email\": \"%s\",\n" +
-                        "  \"password\": \"senha123\",\n" +
-                        "  \"administrador\": \"false\"\n" +
-                        "}",
-                duplicateEmail);
+        String user1 = String.format("""
+                {
+                  "nome": "User 1",
+                  "email": "%s",
+                  "password": "senha123",
+                  "administrador": "false"
+                }
+                """, duplicateEmail);
 
         APIResponse first = request.post("/usuarios", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
                 .setData(user1));
         assertEquals(201, first.status());
 
-        String user2 = String.format(
-                "{\n" +
-                        "  \"nome\": \"User 2\",\n" +
-                        "  \"email\": \"%s\",\n" +
-                        "  \"password\": \"anotherpassword\",\n" +
-                        "  \"administrador\": \"true\"\n" +
-                        "}",
-                duplicateEmail);
+        String user2 = String.format("""
+                {
+                  "nome": "User 2",
+                  "email": "%s",
+                  "password": "anotherpassword",
+                  "administrador": "true"
+                }
+                """, duplicateEmail);
 
         APIResponse second = request.post("/usuarios", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -209,14 +209,14 @@ public class UsersPlaywrightTest extends BaseApiTest {
     void ct08_validateFormatsWithRegularExpressions() throws Exception {
         String newEmail = "test.regex." + System.currentTimeMillis() + "@example.com";
 
-        String userData = String.format(
-                "{\n" +
-                        "  \"nome\": \"Regex Test\",\n" +
-                        "  \"email\": \"%s\",\n" +
-                        "  \"password\": \"StrongPassword@123\",\n" +
-                        "  \"administrador\": \"false\"\n" +
-                        "}",
-                newEmail);
+        String userData = String.format("""
+                {
+                  "nome": "Regex Test",
+                  "email": "%s",
+                  "password": "StrongPassword@123",
+                  "administrador": "false"
+                }
+                """, newEmail);
 
         APIResponse createResp = request.post("/usuarios", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -287,14 +287,14 @@ public class UsersPlaywrightTest extends BaseApiTest {
     void ct11_prepareDataForNestedObjectValidation() throws Exception {
         String complexEmail = FakerUtils.randomEmail();
 
-        String complexData = String.format(
-                "{\n" +
-                        "  \"nome\": \"Complex User\",\n" +
-                        "  \"email\": \"%s\",\n" +
-                        "  \"password\": \"senha123\",\n" +
-                        "  \"administrador\": \"true\"\n" +
-                        "}",
-                complexEmail);
+        String complexData = String.format("""
+                {
+                  "nome": "Complex User",
+                  "email": "%s",
+                  "password": "senha123",
+                  "administrador": "true"
+                }
+                """, complexEmail);
 
         APIResponse resp = request.post("/usuarios", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -360,14 +360,14 @@ public class UsersPlaywrightTest extends BaseApiTest {
         String userEmail = FakerUtils.randomEmail();
         String userPassword = "SenhaSegura@123";
 
-        String userData = String.format(
-                "{\n" +
-                        "  \"nome\": \"User With Cart\",\n" +
-                        "  \"email\": \"%s\",\n" +
-                        "  \"password\": \"%s\",\n" +
-                        "  \"administrador\": \"true\"\n" +
-                        "}",
-                userEmail, userPassword);
+        String userData = String.format("""
+                {
+                  "nome": "User With Cart",
+                  "email": "%s",
+                  "password": "%s",
+                  "administrador": "true"
+                }
+                """, userEmail, userPassword);
 
         APIResponse createUserResp = request.post("/usuarios", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -388,14 +388,14 @@ public class UsersPlaywrightTest extends BaseApiTest {
         String userToken = (String) loginBody.get("authorization");
 
         String productName = "Product for user cart " + System.currentTimeMillis();
-        String productData = String.format(
-                "{\n" +
-                        "  \"nome\": \"%s\",\n" +
-                        "  \"preco\": 100,\n" +
-                        "  \"descricao\": \"Product associated to user cart\",\n" +
-                        "  \"quantidade\": 5\n" +
-                        "}",
-                productName);
+        String productData = String.format("""
+                {
+                  "nome": "%s",
+                  "preco": 100,
+                  "descricao": "Product associated to user cart",
+                  "quantidade": 5
+                }
+                """, productName);
 
         APIResponse productResp = request.post("/produtos", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -443,23 +443,23 @@ public class UsersPlaywrightTest extends BaseApiTest {
         String email1 = FakerUtils.randomEmail();
         String email2 = FakerUtils.randomEmail();
 
-        String user1 = String.format(
-                "{\n" +
-                        "  \"nome\": \"User One\",\n" +
-                        "  \"email\": \"%s\",\n" +
-                        "  \"password\": \"Senha123@\",\n" +
-                        "  \"administrador\": \"false\"\n" +
-                        "}",
-                email1);
+        String user1 = String.format("""
+                {
+                  "nome": "User One",
+                  "email": "%s",
+                  "password": "Senha123@",
+                  "administrador": "false"
+                }
+                """, email1);
 
-        String user2 = String.format(
-                "{\n" +
-                        "  \"nome\": \"User Two\",\n" +
-                        "  \"email\": \"%s\",\n" +
-                        "  \"password\": \"Senha456@\",\n" +
-                        "  \"administrador\": \"true\"\n" +
-                        "}",
-                email2);
+        String user2 = String.format("""
+                {
+                  "nome": "User Two",
+                  "email": "%s",
+                  "password": "Senha456@",
+                  "administrador": "true"
+                }
+                """, email2);
 
         APIResponse createUser1Resp = request.post("/usuarios", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -473,14 +473,14 @@ public class UsersPlaywrightTest extends BaseApiTest {
                 .setHeader("Content-Type", "application/json")
                 .setData(user2));
 
-        String updatePayload = String.format(
-                "{\n" +
-                        "  \"nome\": \"User One Updated\",\n" +
-                        "  \"email\": \"%s\",\n" +
-                        "  \"password\": \"Senha123@\",\n" +
-                        "  \"administrador\": \"true\"\n" +
-                        "}",
-                email2);
+        String updatePayload = String.format("""
+                {
+                  "nome": "User One Updated",
+                  "email": "%s",
+                  "password": "Senha123@",
+                  "administrador": "true"
+                }
+                """, email2);
 
         APIResponse updateResp = request.put("/usuarios/" + userId1, RequestOptions.create()
                 .setHeader("Content-Type", "application/json")

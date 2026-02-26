@@ -31,14 +31,14 @@ public class ProductsPlaywrightTest extends BaseApiTest {
         String email = "admin." + UUID.randomUUID() + "@example.com";
         String password = "SenhaSegura@123";
 
-        String userPayload = String.format(
-                "{\n" +
-                        "  \"nome\": \"Admin User\",\n" +
-                        "  \"email\": \"%s\",\n" +
-                        "  \"password\": \"%s\",\n" +
-                        "  \"administrador\": \"true\"\n" +
-                        "}",
-                email, password);
+        String userPayload = String.format("""
+                {
+                  "nome": "Admin User",
+                  "email": "%s",
+                  "password": "%s",
+                  "administrador": "true"
+                }
+                """, email, password);
 
         request.post("/usuarios", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -81,14 +81,14 @@ public class ProductsPlaywrightTest extends BaseApiTest {
     void ct02_createProductAsAdmin() throws Exception {
         String token = getAdminToken();
         String productName = "Product " + System.currentTimeMillis();
-        String productPayload = String.format(
-                "{\n" +
-                        "  \"nome\": \"%s\",\n" +
-                        "  \"preco\": 250,\n" +
-                        "  \"descricao\": \"Automated test product\",\n" +
-                        "  \"quantidade\": 100\n" +
-                        "}",
-                productName);
+        String productPayload = String.format("""
+                {
+                  "nome": "%s",
+                  "preco": 250,
+                  "descricao": "Automated test product",
+                  "quantidade": 100
+                }
+                """, productName);
 
         APIResponse createResp = request.post("/produtos", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -118,14 +118,14 @@ public class ProductsPlaywrightTest extends BaseApiTest {
         String token = getAdminToken();
         String name = "Duplicate Product Test " + System.currentTimeMillis();
 
-        String productPayload = String.format(
-                "{\n" +
-                        "  \"nome\": \"%s\",\n" +
-                        "  \"preco\": 150,\n" +
-                        "  \"descricao\": \"First product\",\n" +
-                        "  \"quantidade\": 50\n" +
-                        "}",
-                name);
+        String productPayload = String.format("""
+                {
+                  "nome": "%s",
+                  "preco": 150,
+                  "descricao": "First product",
+                  "quantidade": 50
+                }
+                """, name);
 
         APIResponse first = request.post("/produtos", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -168,14 +168,14 @@ public class ProductsPlaywrightTest extends BaseApiTest {
         String token = getAdminToken();
         String productName = "Product " + System.currentTimeMillis();
 
-        String initialProduct = String.format(
-                "{\n" +
-                        "  \"nome\": \"%s\",\n" +
-                        "  \"preco\": 100,\n" +
-                        "  \"descricao\": \"Original description\",\n" +
-                        "  \"quantidade\": 50\n" +
-                        "}",
-                productName);
+        String initialProduct = String.format("""
+                {
+                  "nome": "%s",
+                  "preco": 100,
+                  "descricao": "Original description",
+                  "quantidade": 50
+                }
+                """, productName);
 
         APIResponse createResp = request.post("/produtos", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -186,14 +186,14 @@ public class ProductsPlaywrightTest extends BaseApiTest {
         Map<String, Object> createBody = objectMapper.readValue(createResp.body(), Map.class);
         String productId = (String) createBody.get("_id");
 
-        String updatedProduct = String.format(
-                "{\n" +
-                        "  \"nome\": \"%s\",\n" +
-                        "  \"preco\": 200,\n" +
-                        "  \"descricao\": \"Updated description\",\n" +
-                        "  \"quantidade\": 75\n" +
-                        "}",
-                productName);
+        String updatedProduct = String.format("""
+                {
+                  "nome": "%s",
+                  "preco": 200,
+                  "descricao": "Updated description",
+                  "quantidade": 75
+                }
+                """, productName);
 
         APIResponse updateResp = request.put("/produtos/" + productId, RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -244,12 +244,14 @@ public class ProductsPlaywrightTest extends BaseApiTest {
     @Test
     @DisplayName("CT07 - Attempt to create a product without an authentication token")
     void ct07_createProductWithoutToken() throws Exception {
-        String productPayload = "{\n" +
-                "  \"nome\": \"Product Without Auth\",\n" +
-                "  \"preco\": 100,\n" +
-                "  \"descricao\": \"Test\",\n" +
-                "  \"quantidade\": 10\n" +
-                "}";
+        String productPayload = """
+                {
+                  "nome": "Product Without Auth",
+                  "preco": 100,
+                  "descricao": "Test",
+                  "quantidade": 10
+                }
+                """;
 
         APIResponse resp = request.post("/produtos", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -266,23 +268,13 @@ public class ProductsPlaywrightTest extends BaseApiTest {
     @ValueSource(ints = {1, 2, 3, 4})
     void ct08_validateRequiredFieldsWhenCreatingProduct(int numberField) throws Exception {
         String token = getAdminToken();
-                String payload;
-                switch (numberField) {
-                        case 1:
-                                payload = "{\"preco\": 0.55, \"descricao\": \"Test without name\", \"quantidade\": 10}";
-                                break;
-                        case 2:
-                                payload = "{\"nome\": \"Product Without Description\", \"descricao\": \"\", \"quantidade\": 10}";
-                                break;
-                        case 3:
-                                payload = "{\"nome\": \"Product Without Quantity\", \"preco\": 100, \"quantidade\": -1}";
-                                break;
-                        case 4:
-                                payload = "{\"nome\": \"null\", \"preco\": 1.99, \"descricao\": \"null\"}";
-                                break;
-                        default:
-                                throw new IllegalArgumentException("Unknown field: " + numberField);
-                }
+        String payload = switch (numberField) {
+            case 1 -> "{\"preco\": 0.55, \"descricao\": \"Test without name\", \"quantidade\": 10}";
+            case 2 -> "{\"nome\": \"Product Without Description\", \"descricao\": \"\", \"quantidade\": 10}";
+            case 3 -> "{\"nome\": \"Product Without Quantity\", \"preco\": 100, \"quantidade\": -1}";
+            case 4 -> "{\"nome\": \"null\", \"preco\": 1.99, \"descricao\": \"null\"}";
+            default -> throw new IllegalArgumentException("Unknown field: " + numberField);
+        };
 
         APIResponse resp = request.post("/produtos", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -329,14 +321,14 @@ public class ProductsPlaywrightTest extends BaseApiTest {
         String token = getAdminToken();
         String productName = "Product " + System.currentTimeMillis();
 
-        String productPayload = String.format(
-                "{\n" +
-                        "  \"nome\": \"%s\",\n" +
-                        "  \"preco\": 100,\n" +
-                        "  \"descricao\": \"Product to delete\",\n" +
-                        "  \"quantidade\": 10\n" +
-                        "}",
-                productName);
+        String productPayload = String.format("""
+                {
+                  "nome": "%s",
+                  "preco": 100,
+                  "descricao": "Product to delete",
+                  "quantidade": 10
+                }
+                """, productName);
 
         APIResponse createResp = request.post("/produtos", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -386,14 +378,14 @@ public class ProductsPlaywrightTest extends BaseApiTest {
         String adminToken = getAdminToken();
 
         String productName = "Product " + System.currentTimeMillis();
-        String productPayload = String.format(
-                "{\n" +
-                        "  \"nome\": \"%s\",\n" +
-                        "  \"preco\": 300,\n" +
-                        "  \"descricao\": \"Product linked to cart\",\n" +
-                        "  \"quantidade\": 10\n" +
-                        "}",
-                productName);
+        String productPayload = String.format("""
+                {
+                  "nome": "%s",
+                  "preco": 300,
+                  "descricao": "Product linked to cart",
+                  "quantidade": 10
+                }
+                """, productName);
 
         APIResponse createProductResp = request.post("/produtos", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -408,14 +400,14 @@ public class ProductsPlaywrightTest extends BaseApiTest {
         String userEmail = "cart.user." + System.currentTimeMillis() + "@example.com";
         String userPassword = "SenhaSegura@123";
 
-        String userData = String.format(
-                "{\n" +
-                        "  \"nome\": \"Cart User\",\n" +
-                        "  \"email\": \"%s\",\n" +
-                        "  \"password\": \"%s\",\n" +
-                        "  \"administrador\": \"false\"\n" +
-                        "}",
-                userEmail, userPassword);
+        String userData = String.format("""
+                {
+                  "nome": "Cart User",
+                  "email": "%s",
+                  "password": "%s",
+                  "administrador": "false"
+                }
+                """, userEmail, userPassword);
 
         request.post("/usuarios", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -435,11 +427,11 @@ public class ProductsPlaywrightTest extends BaseApiTest {
                 .setHeader("Authorization", userToken));
 
         // Create cart with the product
-        String cartBody = String.format(
-                "{\n" +
-                        "  \"produtos\": [{\"idProduto\": \"%s\", \"quantidade\": 1}]\n" +
-                        "}",
-                productId);
+        String cartBody = String.format("""
+                {
+                  "produtos": [{"idProduto": "%s", "quantidade": 1}]
+                }
+                """, productId);
         APIResponse cartResp = request.post("/carrinhos", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
                 .setHeader("Authorization", userToken)
@@ -462,14 +454,14 @@ public class ProductsPlaywrightTest extends BaseApiTest {
         String userEmail = "non.admin." + System.currentTimeMillis() + "@example.com";
         String userPassword = "SenhaSegura@123";
 
-        String userData = String.format(
-                "{\n" +
-                        "  \"nome\": \"Non Admin User\",\n" +
-                        "  \"email\": \"%s\",\n" +
-                        "  \"password\": \"%s\",\n" +
-                        "  \"administrador\": \"false\"\n" +
-                        "}",
-                userEmail, userPassword);
+        String userData = String.format("""
+                {
+                  "nome": "Non Admin User",
+                  "email": "%s",
+                  "password": "%s",
+                  "administrador": "false"
+                }
+                """, userEmail, userPassword);
 
         request.post("/usuarios", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -486,12 +478,14 @@ public class ProductsPlaywrightTest extends BaseApiTest {
         String nonAdminToken = (String) loginBody.get("authorization");
 
         // Try to create product with non-admin token
-        String productData = "{\n" +
-                "  \"nome\": \"Restricted Product\",\n" +
-                "  \"preco\": 500,\n" +
-                "  \"descricao\": \"Product should be created only by admins\",\n" +
-                "  \"quantidade\": 5\n" +
-                "}";
+        String productData = """
+                {
+                  "nome": "Restricted Product",
+                  "preco": 500,
+                  "descricao": "Product should be created only by admins",
+                  "quantidade": 5
+                }
+                """;
 
         APIResponse productResp = request.post("/produtos", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")

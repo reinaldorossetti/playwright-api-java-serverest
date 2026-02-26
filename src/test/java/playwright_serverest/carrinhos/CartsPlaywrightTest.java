@@ -27,14 +27,14 @@ public class CartsPlaywrightTest extends BaseApiTest {
         String userEmail = FakerUtils.randomEmail();
         String userPassword = "SenhaSegura@123";
 
-        String newUser = String.format(
-                "{\n" +
-                        "  \"nome\": \"Cart Default User\",\n" +
-                        "  \"email\": \"%s\",\n" +
-                        "  \"password\": \"%s\",\n" +
-                        "  \"administrador\": \"true\"\n" +
-                        "}",
-                userEmail, userPassword);
+        String newUser = String.format("""
+        {
+        "nome": "Cart Default User",
+        "email": "%s",
+        "password": "%s",
+        "administrador": "true"
+        }
+        """, userEmail, userPassword);
 
         request.post("/usuarios", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -55,14 +55,14 @@ public class CartsPlaywrightTest extends BaseApiTest {
         String userEmail = FakerUtils.randomEmail();
         String userPassword = "SenhaSegura@123";
 
-        String newUser = String.format(
-                "{\n" +
-                        "  \"nome\": \"Cart User\",\n" +
-                        "  \"email\": \"%s\",\n" +
-                        "  \"password\": \"%s\",\n" +
-                        "  \"administrador\": \"true\"\n" +
-                        "}",
-                userEmail, userPassword);
+        String newUser = String.format("""
+                {
+                  "nome": "Cart User",
+                  "email": "%s",
+                  "password": "%s",
+                  "administrador": "true"
+                }
+                """, userEmail, userPassword);
 
         request.post("/usuarios", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -82,14 +82,14 @@ public class CartsPlaywrightTest extends BaseApiTest {
     private String createProduct(String token, int price, int quantity, String description) throws Exception {
         String productName = FakerUtils.randomProduct();
 
-        String productData = String.format(
-                "{\n" +
-                        "  \"nome\": \"%s\",\n" +
-                        "  \"preco\": %d,\n" +
-                        "  \"descricao\": \"%s\",\n" +
-                        "  \"quantidade\": %d\n" +
-                        "}",
-                productName, price, description, quantity);
+        String productData = String.format("""
+                {
+                  "nome": "%s",
+                  "preco": %d,
+                  "descricao": "%s",
+                  "quantidade": %d
+                }
+                """, productName, price, description, quantity);
 
         APIResponse productResp = request.post("/produtos", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")

@@ -25,14 +25,14 @@ import playwright_serverest.utils.FakerUtils;
 public class LoginPlaywrightTest extends BaseApiTest {
 
     private APIResponse createUser(String email, String password, boolean admin) {
-        String payload = String.format(
-                "{\n" +
-                        "  \"nome\": \"%s\",\n" +
-                        "  \"email\": \"%s\",\n" +
-                        "  \"password\": \"%s\",\n" +
-                        "  \"administrador\": \"%s\"\n" +
-                        "}",
-                email, email, password, admin ? "true" : "false");
+        String payload = String.format("""
+                {
+                  "nome": "%s",
+                  "email": "%s",
+                  "password": "%s",
+                  "administrador": "%s"
+                }
+                """, email, email, password, admin ? "true" : "false");
 
         return request.post("/usuarios", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -66,10 +66,12 @@ public class LoginPlaywrightTest extends BaseApiTest {
     @Test
     @DisplayName("CT02 - Attempt login with invalid credentials")
     void ct02_loginWithInvalidCredentials() throws Exception {
-        String body = "{\n" +
-                "  \"email\": \"usuario@inexistente.com\",\n" +
-                "  \"password\": \"senhaerrada\"\n" +
-                "}";
+        String body = """
+                {
+                  "email": "usuario@inexistente.com",
+                  "password": "senhaerrada"
+                }
+                """;
 
         APIResponse resp = request.post("/login", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")
@@ -134,14 +136,14 @@ public class LoginPlaywrightTest extends BaseApiTest {
 
         // Attempt to access admin-only route with non-admin token
         String productName = FakerUtils.randomProduct();
-        String productPayload = String.format(
-                "{\n" +
-                        "  \"nome\": \"%s\",\n" +
-                        "  \"preco\": 100,\n" +
-                        "  \"descricao\": \"Product generated for auth test\",\n" +
-                        "  \"quantidade\": 10\n" +
-                        "}",
-                productName);
+        String productPayload = String.format("""
+                {
+                  "nome": "%s",
+                  "preco": 100,
+                  "descricao": "Product generated for auth test",
+                  "quantidade": 10
+                }
+                """, productName);
 
         APIResponse productResp = request.post("/produtos", RequestOptions.create()
                 .setHeader("Content-Type", "application/json")

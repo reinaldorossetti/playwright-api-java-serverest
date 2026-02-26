@@ -89,10 +89,11 @@ https://serverest.dev
 ```
 playwright-api-java-serverest/
 │
+├── .github/
+│   └── workflows/
+│       └── ci.yml                       # Pipeline de CI
+│
 ├── src/
-│   ├── main/
-│   │   └── java/                         # (vazio neste projeto)
-│   │
 │   └── test/
 │       ├── java/
 │       │   └── playwright_serverest/
@@ -110,15 +111,19 @@ playwright-api-java-serverest/
 │       │           └── FakerUtils.java
 │       │
 │       └── resources/
-│           ├── playwright/
-│           │   └── login/
+│           ├── allure.properties
+│           └── playwright_serverest/
+│               ├── login/
 │           │       ├── invalid-login-emails.csv
 │           │       └── invalido-login.csv
-│           └── serverest/
 │               ├── usuarios/resources/userPayload.json
-│               └── produtos/resources/productPayload.json
+│               └── produtos/resources/
+│                   ├── productPayload.json
+│                   └── product.csv
 │
+├── junit-platform.properties             # Configuração de paralelismo JUnit 5
 ├── pom.xml                               # Dependências Maven
+├── TESTING_API.MD                        # Documentação dos cenários de teste
 └── readme.MD                             # Este arquivo
 ```
 
@@ -152,10 +157,11 @@ mvn -version
 | JUnit 5 (Jupiter API)             | org.junit.jupiter:junit-jupiter-api                | 5.10.1  |
 | JUnit 5 (Jupiter Engine)          | org.junit.jupiter:junit-jupiter-engine             | 5.10.1  |
 | JUnit 5 (Jupiter Params)          | org.junit.jupiter:junit-jupiter-params             | 5.10.1  |
+| JUnit Platform Suite API          | org.junit.platform:junit-platform-suite-api         | 1.10.1  |
+| JUnit Platform Suite Engine       | org.junit.platform:junit-platform-suite-engine      | 1.10.1  |
+| JUnit Platform Launcher           | org.junit.platform:junit-platform-launcher          | 1.10.1  |
 | Jackson Databind                   | com.fasterxml.jackson.core:jackson-databind        | 2.17.0  |
 | Java Faker                         | com.github.javafaker:javafaker                     | 1.0.2   |
-| Hamcrest                           | org.hamcrest:hamcrest                              | 2.2     |
-| Maven Surefire Plugin             | org.apache.maven.plugins:maven-surefire-plugin     | 3.2.5   |
 | Allure JUnit5                      | io.qameta.allure:allure-junit5                     | 2.17.0  |
 
 ---
@@ -173,13 +179,12 @@ cd playwright-api-java-serverest
 
 ```bash
 mvn -q test-compile
-mvn clean install
 ```
 
 ### 3. Verifique a instalação
 
 ```bash
-mvn test
+mvn clean test
 ```
 
 ---
@@ -210,10 +215,9 @@ Arquivo: `junit-platform.properties`
 
 ```properties
 junit.jupiter.execution.parallel.enabled=true
-junit.jupiter.execution.parallel.mode.default=concurrent
+junit.jupiter.execution.parallel.mode.default=same_thread
 junit.jupiter.execution.parallel.mode.classes.default=concurrent
 junit.jupiter.execution.parallel.config.strategy=dynamic
-junit.jupiter.execution.parallel.config.dynamic.factor=2
 ```
 
 ---
@@ -234,13 +238,16 @@ Este projeto possui integração contínua configurada no GitHub Actions em:
 1. **Checkout do código**
    - `actions/checkout@v4`
 2. **Configuração do Java 17**
-   - `actions/setup-java@v5` com:
-     - `java-version: '21'`
+     - `actions/setup-java@v4` com:
+         - `java-version: '17'`
      - `distribution: 'temurin'`
+         - cache Maven habilitado
 3. **Execução dos testes via Maven**
     - Comando sugerido para Playwright API: `mvn -B clean test`
-4. **Publicação de relatórios Allure**
-   - Publica `target/allure-report` via `peaceiris/actions-gh-pages@v4` na branch `gh-pages`, pasta `allure-reports`.
+4. **Geração e publicação de relatórios Allure**
+    - Gera `target/allure-report` com `mvn -B allure:report`
+    - Faz upload do artefato `allure-report` via `actions/upload-artifact@v4`
+    - Publica no GitHub Pages via `peaceiris/actions-gh-pages@v4` na branch `gh-pages`, pasta `allure-reports`
 
 ### 🌐 Acesso ao relatório no GitHub Pages
 
@@ -316,9 +323,10 @@ void ct02_loginWithInvalidCredentials() throws Exception {
 ### Exemplo 4: Validação de campos obrigatórios
 
 ```java
-@Test
+@ParameterizedTest(name = "CT03 - Validate required fields on login")
+@CsvFileSource(resources = "/playwright_serverest/login/invalido-login.csv", numLinesToSkip = 1)
 @DisplayName("CT03 - Validate required fields on login")
-void ct03_validateRequiredFields() {
+void ct03_validateRequiredFields() throws Exception {
     APIResponse resp = request.post("/login", RequestOptions.create()
         .setHeader("Content-Type", "application/json")
         .setData("{\"email\":\"\",\"password\":\"senha123\"}"));
@@ -348,7 +356,7 @@ void ct04_loginAndUseTokenInProtectedRoute() throws Exception {
 
 ```java
 @ParameterizedTest(name = "CT05 - Email inválido: {0}")
-@CsvFileSource(resources = "/playwright/login/invalid-login-emails.csv", numLinesToSkip = 1)
+@CsvFileSource(resources = "/playwright_serverest/login/invalid-login-emails.csv", numLinesToSkip = 1)
 @Execution(ExecutionMode.CONCURRENT)
 @DisplayName("CT05 - Validate invalid email format")
 void ct05_validateInvalidEmailFormat(String invalidEmail) {
@@ -362,7 +370,7 @@ void ct05_validateInvalidEmailFormat(String invalidEmail) {
 
 ### Arquivo CSV utilizado no CT05
 
-`src/test/resources/playwright/login/invalid-login-emails.csv`
+`src/test/resources/playwright_serverest/login/invalid-login-emails.csv`
 
 ```csv
 email
@@ -456,10 +464,10 @@ O relatório exibe:
 ### 2. Anotações para Organização
 
 ```java
-@Tag("smoke")
-@Tag("regression")
-@Tag("login")
-@Disabled
+@DisplayName("CT01 - Perform login with valid credentials and validate token")
+@ParameterizedTest(name = "CT05 - Validate invalid email format: {0}")
+@CsvFileSource(resources = "/playwright_serverest/login/invalid-login-emails.csv", numLinesToSkip = 1)
+@Execution(ExecutionMode.CONCURRENT)
 ```
 
 ### 3. Reutilização de Código
@@ -471,16 +479,36 @@ O relatório exibe:
 ### 4. Dados de Teste
 
 ```java
-String email = FakerUtils.randomEmail();
-String product = FakerUtils.randomProduct() + System.currentTimeMillis();
+public static String randomEmail() {
+        String firstName = FAKER.name().firstName().toLowerCase().replaceAll("[^a-z0-9]", "");
+        String suffix = UUID.randomUUID().toString().replace("-", "").substring(0, 8);
+        return firstName + "." + suffix + "@gmail.com";
+    }
 ```
 
 ### 5. Validações Completas
 
 ```java
+Map<String, Object> expectedBody = Map.of(
+    "message", "Login realizado com sucesso",
+    "authorization", body.get("authorization")
+);
+assertEquals(expectedBody, body);
 assertEquals(200, response.status());
 assertNotNull(body.get("authorization"));
 assertEquals("Login realizado com sucesso", body.get("message"));
+assertTrue(body.containsKey("authorization"));
+assertTrue(((String) body.get("authorization")).startsWith("Bearer "));
+assertFalse(((String) body.get("authorization")).isBlank());
+assertInstanceOf(String.class, body.get("authorization"));
+assertAll(
+    () -> assertEquals(200, response.status()),
+    () -> assertEquals("Login realizado com sucesso", body.get("message")),
+    () -> assertNotNull(body.get("authorization"))
+);
+assertDoesNotThrow(() -> parseResponseBody(response));
+assertTimeout(java.time.Duration.ofSeconds(2), () -> request.get("/usuarios"));
+assertNotEquals("Token inválido", body.get("message"));
 ```
 
 ---

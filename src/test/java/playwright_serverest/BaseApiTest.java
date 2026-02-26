@@ -9,6 +9,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.api.TestInstance.Lifecycle;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.microsoft.playwright.APIRequest;
 import com.microsoft.playwright.APIRequestContext;
@@ -58,7 +59,7 @@ public abstract class BaseApiTest {
         }
         try {
             return objectMapper.writeValueAsString(map);
-        } catch (Exception e) {
+        } catch (JsonProcessingException e) {
             throw new RuntimeException("Failed to serialize JSON", e);
         }
     }
