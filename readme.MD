@@ -22,6 +22,7 @@ Testes realizados na API: [TESTING_API.MD](TESTING_API.MD)
 - [Sobre a API ServeRest](#-sobre-a-api-serverest)
 - [Estrutura do Projeto](#-estrutura-do-projeto)
 - [Pré-requisitos](#-pré-requisitos)
+- [Java 17 no Projeto](#-java-17-no-projeto)
 - [Instalação](#-instalação)
 - [Executando os Testes](#-executando-os-testes)
 - [Exemplos de Testes](#-exemplos-de-testes)
@@ -146,6 +147,53 @@ playwright-api-java-serverest/
 java -version
 mvn -version
 ```
+
+---
+
+## ☕ Java 17 no Projeto
+
+Este projeto utiliza **Java 17** como baseline de compilação e execução (`source`, `target` e `release` no `pom.xml`).
+
+Na prática, isso permite usar recursos modernos da linguagem para deixar os testes mais legíveis, com menos código boilerplate e melhor manutenção.
+
+### ✅ Exemplos práticos usados no projeto
+
+1. **Text Blocks (`"""`) para payloads JSON**
+
+```java
+String payload = String.format("""
+                {
+                    "nome": "%s",
+                    "preco": 250,
+                    "descricao": "Produto de teste",
+                    "quantidade": 10
+                }
+                """, productName);
+```
+
+2. **Switch Expression (rule switch) para cenários parametrizados**
+
+```java
+String payload = switch (numberField) {
+        case 1 -> "{\"preco\": 0.55, \"descricao\": \"Sem nome\", \"quantidade\": 10}";
+        case 2 -> "{\"nome\": \"Sem descrição\", \"descricao\": \"\", \"quantidade\": 10}";
+        default -> throw new IllegalArgumentException("Campo inválido: " + numberField);
+};
+```
+
+3. **Inferência local com `var` (quando melhora legibilidade)**
+
+```java
+var response = request.get("/produtos");
+var body = parseResponseBody(response);
+```
+
+### 💡 Boas práticas com Java 17 para este projeto
+
+- Prefira `text block` para JSON multilinha em testes.
+- Use `switch expression` em cenários de dados dirigidos por parâmetros.
+- Use `var` apenas quando o tipo ficar óbvio pelo contexto.
+- Mantenha compatibilidade com Java 17 para execução local e CI.
 
 ---
 
