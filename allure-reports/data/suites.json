@@ -2,364 +2,16 @@
   "uid" : "98d3104e051c652961429bf95fa0b5d6",
   "name" : "suites",
   "children" : [ {
-    "name" : "playwright_serverest.login.LoginPlaywrightTest",
-    "children" : [ {
-      "name" : "CT04 - Login and use token to access a protected resource",
-      "uid" : "5ced2f354b679319",
-      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025259155,
-        "stop" : 1772025259615,
-        "duration" : 460
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT01 - Perform login with valid credentials and validate token",
-      "uid" : "d63b34a13fc6de6",
-      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025259660,
-        "stop" : 1772025259728,
-        "duration" : 68
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT03 - Validate required fields on login CT03 - Validate required fields on login",
-      "uid" : "df723c16d2c14bb",
-      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025259774,
-        "stop" : 1772025259883,
-        "duration" : 109
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT03 - Validate required fields on login CT03 - Validate required fields on login",
-      "uid" : "b9d882bf0f0ff02e",
-      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025259888,
-        "stop" : 1772025259978,
-        "duration" : 90
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT03 - Validate required fields on login CT03 - Validate required fields on login",
-      "uid" : "98bbe6dd84fb4e3b",
-      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025259982,
-        "stop" : 1772025260078,
-        "duration" : 96
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT02 - Attempt login with invalid credentials",
-      "uid" : "ec2193da8210b18a",
-      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025260082,
-        "stop" : 1772025260113,
-        "duration" : 31
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT05 - Validate invalid email format CT05 - Validate invalid email format: emailwithoutat",
-      "uid" : "e7c5cdb2ba360a00",
-      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025260119,
-        "stop" : 1772025260169,
-        "duration" : 50
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT05 - Validate invalid email format CT05 - Validate invalid email format: @noname.com",
-      "uid" : "922545985e253a0a",
-      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025260172,
-        "stop" : 1772025260200,
-        "duration" : 28
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT05 - Validate invalid email format CT05 - Validate invalid email format: email@nodomain",
-      "uid" : "3f3f4f5f64554e6d",
-      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025260203,
-        "stop" : 1772025260234,
-        "duration" : 31
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT05 - Validate invalid email format CT05 - Validate invalid email format: email",
-      "uid" : "a180e2bc41cb7bf",
-      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025260237,
-        "stop" : 1772025260271,
-        "duration" : 34
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT05 - Validate invalid email format CT05 - Validate invalid email format: 12345@test.c",
-      "uid" : "d38fc95c9fa1499f",
-      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025260274,
-        "stop" : 1772025260305,
-        "duration" : 31
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT05 - Validate invalid email format CT05 - Validate invalid email format: !@#$%",
-      "uid" : "ca95d073b9c6e7fc",
-      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025260308,
-        "stop" : 1772025260340,
-        "duration" : 32
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    } ],
-    "uid" : "56527a472e70da4c9a945e9dbf2001d4"
-  }, {
-    "name" : "playwright_serverest.carrinhos.CartsPlaywrightTest",
-    "children" : [ {
-      "name" : "CT01 - Full cart lifecycle for authenticated user",
-      "uid" : "f4a28152f38dfe03",
-      "parentUid" : "3c87a19f105b9d0053907132f9878d0a",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025262185,
-        "stop" : 1772025263382,
-        "duration" : 1197
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT06 - Prevent cart creation when product stock is insufficient",
-      "uid" : "270257e3d7aedb0f",
-      "parentUid" : "3c87a19f105b9d0053907132f9878d0a",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025263422,
-        "stop" : 1772025263685,
-        "duration" : 263
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT07 - Prevent cart creation with duplicated products in the same cart",
-      "uid" : "b448631c32bfe006",
-      "parentUid" : "3c87a19f105b9d0053907132f9878d0a",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025263690,
-        "stop" : 1772025263970,
-        "duration" : 280
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT03 - Prevent creating cart without authentication token",
-      "uid" : "3cd8341841f96e94",
-      "parentUid" : "3c87a19f105b9d0053907132f9878d0a",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025263973,
-        "stop" : 1772025264051,
-        "duration" : 78
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT04 - Prevent creating more than one cart for the same user",
-      "uid" : "29c2d90f147ac673",
-      "parentUid" : "3c87a19f105b9d0053907132f9878d0a",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025264053,
-        "stop" : 1772025264463,
-        "duration" : 410
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT05 - Cart not found by ID",
-      "uid" : "18b7037700f78dce",
-      "parentUid" : "3c87a19f105b9d0053907132f9878d0a",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025264467,
-        "stop" : 1772025264515,
-        "duration" : 48
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT02 - Cancel purchase and return products to stock",
-      "uid" : "31b373f4725a8512",
-      "parentUid" : "3c87a19f105b9d0053907132f9878d0a",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025264518,
-        "stop" : 1772025264818,
-        "duration" : 300
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT08 - Prevent cart creation with non-existing product",
-      "uid" : "83c3b969d9f2e691",
-      "parentUid" : "3c87a19f105b9d0053907132f9878d0a",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025264820,
-        "stop" : 1772025265012,
-        "duration" : 192
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    } ],
-    "uid" : "3c87a19f105b9d0053907132f9878d0a"
-  }, {
     "name" : "playwright_serverest.usuarios.UsersPlaywrightTest",
     "children" : [ {
       "name" : "CT05 - Validate error messages when creating a duplicate email",
-      "uid" : "3e27b62efcb2146d",
+      "uid" : "7461b13522b63ceb",
       "parentUid" : "342affedaee1105ab7cc09d9e63f603d",
       "status" : "passed",
       "time" : {
-        "start" : 1772025262214,
-        "stop" : 1772025262604,
-        "duration" : 390
+        "start" : 1772073415340,
+        "stop" : 1772073416445,
+        "duration" : 1105
       },
       "flaky" : false,
       "newFailed" : false,
@@ -370,29 +22,12 @@
       "parameters" : [ ]
     }, {
       "name" : "CT01 - List all users and validate JSON structure",
-      "uid" : "bc0069bb02da02d0",
+      "uid" : "39b5ede2e58a40f0",
       "parentUid" : "342affedaee1105ab7cc09d9e63f603d",
       "status" : "passed",
       "time" : {
-        "start" : 1772025262639,
-        "stop" : 1772025262754,
-        "duration" : 115
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT12 - Create a user from fixed JSON file",
-      "uid" : "f9f3c345707f75c9",
-      "parentUid" : "342affedaee1105ab7cc09d9e63f603d",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025262759,
-        "stop" : 1772025262817,
+        "start" : 1772073416490,
+        "stop" : 1772073416548,
         "duration" : 58
       },
       "flaky" : false,
@@ -403,14 +38,31 @@
       "retriesStatusChange" : false,
       "parameters" : [ ]
     }, {
-      "name" : "CT15 - Get user by invalid ID should return 400",
-      "uid" : "cc7136fd27203ef7",
+      "name" : "CT12 - Create a user from fixed JSON file",
+      "uid" : "d8ffdcf4584a9df9",
       "parentUid" : "342affedaee1105ab7cc09d9e63f603d",
       "status" : "passed",
       "time" : {
-        "start" : 1772025262821,
-        "stop" : 1772025262869,
-        "duration" : 48
+        "start" : 1772073416552,
+        "stop" : 1772073416609,
+        "duration" : 57
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT15 - Get user by invalid ID should return 400",
+      "uid" : "cc027bd74f65117",
+      "parentUid" : "342affedaee1105ab7cc09d9e63f603d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073416612,
+        "stop" : 1772073416655,
+        "duration" : 43
       },
       "flaky" : false,
       "newFailed" : false,
@@ -421,13 +73,13 @@
       "parameters" : [ ]
     }, {
       "name" : "CT04 - Advanced JSON validations with filters",
-      "uid" : "41e9fc891de70609",
+      "uid" : "616cbb712cede1a1",
       "parentUid" : "342affedaee1105ab7cc09d9e63f603d",
       "status" : "passed",
       "time" : {
-        "start" : 1772025262873,
-        "stop" : 1772025262958,
-        "duration" : 85
+        "start" : 1772073416658,
+        "stop" : 1772073416723,
+        "duration" : 65
       },
       "flaky" : false,
       "newFailed" : false,
@@ -438,13 +90,13 @@
       "parameters" : [ ]
     }, {
       "name" : "CT06 - Validate with fuzzy matching",
-      "uid" : "c0529aaf0d7aac1b",
+      "uid" : "1992399bf68e56d",
       "parentUid" : "342affedaee1105ab7cc09d9e63f603d",
       "status" : "passed",
       "time" : {
-        "start" : 1772025262961,
-        "stop" : 1772025263035,
-        "duration" : 74
+        "start" : 1772073416726,
+        "stop" : 1772073416772,
+        "duration" : 46
       },
       "flaky" : false,
       "newFailed" : false,
@@ -455,13 +107,13 @@
       "parameters" : [ ]
     }, {
       "name" : "CT03 - Create a new user with complete validations",
-      "uid" : "f091bca1c73a344e",
+      "uid" : "51464c474762f57b",
       "parentUid" : "342affedaee1105ab7cc09d9e63f603d",
       "status" : "passed",
       "time" : {
-        "start" : 1772025263038,
-        "stop" : 1772025263163,
-        "duration" : 125
+        "start" : 1772073416774,
+        "stop" : 1772073416932,
+        "duration" : 158
       },
       "flaky" : false,
       "newFailed" : false,
@@ -472,13 +124,13 @@
       "parameters" : [ ]
     }, {
       "name" : "CT02 - Get a specific user by ID",
-      "uid" : "2c678cbae59077f8",
+      "uid" : "840a72b64bf28f81",
       "parentUid" : "342affedaee1105ab7cc09d9e63f603d",
       "status" : "passed",
       "time" : {
-        "start" : 1772025263166,
-        "stop" : 1772025263298,
-        "duration" : 132
+        "start" : 1772073416935,
+        "stop" : 1772073417030,
+        "duration" : 95
       },
       "flaky" : false,
       "newFailed" : false,
@@ -489,13 +141,13 @@
       "parameters" : [ ]
     }, {
       "name" : "CT08 - Validate formats with regular expressions",
-      "uid" : "f99ce9c8f7cfd386",
+      "uid" : "3df97ec1dbdec9f0",
       "parentUid" : "342affedaee1105ab7cc09d9e63f603d",
       "status" : "passed",
       "time" : {
-        "start" : 1772025263300,
-        "stop" : 1772025263434,
-        "duration" : 134
+        "start" : 1772073417033,
+        "stop" : 1772073417129,
+        "duration" : 96
       },
       "flaky" : false,
       "newFailed" : false,
@@ -506,13 +158,13 @@
       "parameters" : [ ]
     }, {
       "name" : "CT09 - Validate absence of fields",
-      "uid" : "4cfc93b937148f03",
+      "uid" : "49e57ebc63bb5474",
       "parentUid" : "342affedaee1105ab7cc09d9e63f603d",
       "status" : "passed",
       "time" : {
-        "start" : 1772025263437,
-        "stop" : 1772025263510,
-        "duration" : 73
+        "start" : 1772073417132,
+        "stop" : 1772073417183,
+        "duration" : 51
       },
       "flaky" : false,
       "newFailed" : false,
@@ -523,13 +175,13 @@
       "parameters" : [ ]
     }, {
       "name" : "CT13 - Create and delete user based on JSON payload",
-      "uid" : "c36fb3304752f8c9",
+      "uid" : "baba60c9a2afd4ab",
       "parentUid" : "342affedaee1105ab7cc09d9e63f603d",
       "status" : "passed",
       "time" : {
-        "start" : 1772025263512,
-        "stop" : 1772025263658,
-        "duration" : 146
+        "start" : 1772073417186,
+        "stop" : 1772073417323,
+        "duration" : 137
       },
       "flaky" : false,
       "newFailed" : false,
@@ -540,13 +192,13 @@
       "parameters" : [ ]
     }, {
       "name" : "CT07 - Conditional validations based on values",
-      "uid" : "be9d9b6a3c096aaa",
+      "uid" : "5e8ae6aabe255ef2",
       "parentUid" : "342affedaee1105ab7cc09d9e63f603d",
       "status" : "passed",
       "time" : {
-        "start" : 1772025263660,
-        "stop" : 1772025263729,
-        "duration" : 69
+        "start" : 1772073417326,
+        "stop" : 1772073417372,
+        "duration" : 46
       },
       "flaky" : false,
       "newFailed" : false,
@@ -557,13 +209,13 @@
       "parameters" : [ ]
     }, {
       "name" : "CT11 - Prepare data for nested object validation",
-      "uid" : "208f2bba2a6a5ac9",
+      "uid" : "f300292547433ec6",
       "parentUid" : "342affedaee1105ab7cc09d9e63f603d",
       "status" : "passed",
       "time" : {
-        "start" : 1772025263732,
-        "stop" : 1772025263788,
-        "duration" : 56
+        "start" : 1772073417374,
+        "stop" : 1772073417419,
+        "duration" : 45
       },
       "flaky" : false,
       "newFailed" : false,
@@ -574,13 +226,13 @@
       "parameters" : [ ]
     }, {
       "name" : "CT16 - Prevent updating user with duplicate e-mail",
-      "uid" : "887e41c7383b7301",
+      "uid" : "1c63c3f95da0eabf",
       "parentUid" : "342affedaee1105ab7cc09d9e63f603d",
       "status" : "passed",
       "time" : {
-        "start" : 1772025263790,
-        "stop" : 1772025263942,
-        "duration" : 152
+        "start" : 1772073417421,
+        "stop" : 1772073417568,
+        "duration" : 147
       },
       "flaky" : false,
       "newFailed" : false,
@@ -591,13 +243,13 @@
       "parameters" : [ ]
     }, {
       "name" : "CT10 - Use variables for dynamic validations",
-      "uid" : "b9beb61a16d52de3",
+      "uid" : "3cf646c4ccd481dc",
       "parentUid" : "342affedaee1105ab7cc09d9e63f603d",
       "status" : "passed",
       "time" : {
-        "start" : 1772025263944,
-        "stop" : 1772025264153,
-        "duration" : 209
+        "start" : 1772073417570,
+        "stop" : 1772073417662,
+        "duration" : 92
       },
       "flaky" : false,
       "newFailed" : false,
@@ -608,13 +260,13 @@
       "parameters" : [ ]
     }, {
       "name" : "CT14 - Prevent deleting user that has an associated cart",
-      "uid" : "9c2b0af61b667a00",
+      "uid" : "3c128cf494f76117",
       "parentUid" : "342affedaee1105ab7cc09d9e63f603d",
       "status" : "passed",
       "time" : {
-        "start" : 1772025264155,
-        "stop" : 1772025264464,
-        "duration" : 309
+        "start" : 1772073417665,
+        "stop" : 1772073417951,
+        "duration" : 286
       },
       "flaky" : false,
       "newFailed" : false,
@@ -626,16 +278,16 @@
     } ],
     "uid" : "342affedaee1105ab7cc09d9e63f603d"
   }, {
-    "name" : "playwright_serverest.produtos.ProductsPlaywrightTest",
+    "name" : "playwright_serverest.login.LoginPlaywrightTest",
     "children" : [ {
-      "name" : "CT13 - Restrict product creation to administrators only",
-      "uid" : "86008f623d939602",
-      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "name" : "CT04 - Login and use token to access a protected resource",
+      "uid" : "6f1507c530872d52",
+      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
       "status" : "passed",
       "time" : {
-        "start" : 1772025267404,
-        "stop" : 1772025267588,
-        "duration" : 184
+        "start" : 1772073419754,
+        "stop" : 1772073420274,
+        "duration" : 520
       },
       "flaky" : false,
       "newFailed" : false,
@@ -645,14 +297,14 @@
       "retriesStatusChange" : false,
       "parameters" : [ ]
     }, {
-      "name" : "CT12 - Prevent deleting a product that is part of a cart",
-      "uid" : "a5cc8ccecdbf26bc",
-      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "name" : "CT01 - Perform login with valid credentials and validate token",
+      "uid" : "4a6ee27e01f03b6b",
+      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
       "status" : "passed",
       "time" : {
-        "start" : 1772025267621,
-        "stop" : 1772025267896,
-        "duration" : 275
+        "start" : 1772073420326,
+        "stop" : 1772073420412,
+        "duration" : 86
       },
       "flaky" : false,
       "newFailed" : false,
@@ -662,14 +314,14 @@
       "retriesStatusChange" : false,
       "parameters" : [ ]
     }, {
-      "name" : "CT02 - Create a new product as an administrator",
-      "uid" : "729d467fd8960eea",
-      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "name" : "CT03 - Validate required fields on login CT03 - Validate required fields on login",
+      "uid" : "139547cd01737013",
+      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
       "status" : "passed",
       "time" : {
-        "start" : 1772025267900,
-        "stop" : 1772025268036,
-        "duration" : 136
+        "start" : 1772073420478,
+        "stop" : 1772073420643,
+        "duration" : 165
       },
       "flaky" : false,
       "newFailed" : false,
@@ -679,14 +331,14 @@
       "retriesStatusChange" : false,
       "parameters" : [ ]
     }, {
-      "name" : "CT10 - Delete an existing product",
-      "uid" : "2bb031eaf8091eca",
-      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "name" : "CT03 - Validate required fields on login CT03 - Validate required fields on login",
+      "uid" : "5751bc8f1b1649ba",
+      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
       "status" : "passed",
       "time" : {
-        "start" : 1772025268039,
-        "stop" : 1772025268215,
-        "duration" : 176
+        "start" : 1772073420651,
+        "stop" : 1772073420771,
+        "duration" : 120
       },
       "flaky" : false,
       "newFailed" : false,
@@ -696,14 +348,14 @@
       "retriesStatusChange" : false,
       "parameters" : [ ]
     }, {
-      "name" : "CT11 - Create a product from fixed JSON payload",
-      "uid" : "ce63ff9c23df7281",
-      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "name" : "CT03 - Validate required fields on login CT03 - Validate required fields on login",
+      "uid" : "11dc8c4ab690c864",
+      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
       "status" : "passed",
       "time" : {
-        "start" : 1772025268218,
-        "stop" : 1772025268322,
-        "duration" : 104
+        "start" : 1772073420776,
+        "stop" : 1772073420941,
+        "duration" : 165
       },
       "flaky" : false,
       "newFailed" : false,
@@ -713,14 +365,14 @@
       "retriesStatusChange" : false,
       "parameters" : [ ]
     }, {
-      "name" : "CT07 - Attempt to create a product without an authentication token",
-      "uid" : "64c04ec5e5abfba4",
-      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "name" : "CT02 - Attempt login with invalid credentials",
+      "uid" : "d2b2c34a50b53111",
+      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
       "status" : "passed",
       "time" : {
-        "start" : 1772025268324,
-        "stop" : 1772025268352,
-        "duration" : 28
+        "start" : 1772073420945,
+        "stop" : 1772073421022,
+        "duration" : 77
       },
       "flaky" : false,
       "newFailed" : false,
@@ -730,14 +382,14 @@
       "retriesStatusChange" : false,
       "parameters" : [ ]
     }, {
-      "name" : "CT08 - Validate required fields when creating a product CT08 - Validate required fields when creating a product",
-      "uid" : "139b949391ccbeab",
-      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "name" : "CT05 - Validate invalid email format CT05 - Validate invalid email format: emailwithoutat",
+      "uid" : "799dfafab2962eb9",
+      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
       "status" : "passed",
       "time" : {
-        "start" : 1772025268369,
-        "stop" : 1772025268473,
-        "duration" : 104
+        "start" : 1772073421028,
+        "stop" : 1772073421129,
+        "duration" : 101
       },
       "flaky" : false,
       "newFailed" : false,
@@ -747,132 +399,13 @@
       "retriesStatusChange" : false,
       "parameters" : [ ]
     }, {
-      "name" : "CT08 - Validate required fields when creating a product CT08 - Validate required fields when creating a product",
-      "uid" : "4f7eb663c48caed",
-      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "name" : "CT05 - Validate invalid email format CT05 - Validate invalid email format: @noname.com",
+      "uid" : "f55ae8a312ce1c21",
+      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
       "status" : "passed",
       "time" : {
-        "start" : 1772025268477,
-        "stop" : 1772025268581,
-        "duration" : 104
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT08 - Validate required fields when creating a product CT08 - Validate required fields when creating a product",
-      "uid" : "bedbfae796b4b4c",
-      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025268584,
-        "stop" : 1772025268901,
-        "duration" : 317
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT08 - Validate required fields when creating a product CT08 - Validate required fields when creating a product",
-      "uid" : "3912647c177105f1",
-      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025268904,
-        "stop" : 1772025269010,
-        "duration" : 106
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT09 - Work with complex JSON data",
-      "uid" : "ca2251caf58d2d86",
-      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025269014,
-        "stop" : 1772025269072,
-        "duration" : 58
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT01 - List all products and validate JSON structure",
-      "uid" : "59e772114907a7a1",
-      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025269075,
-        "stop" : 1772025269122,
-        "duration" : 47
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT06 - Validate price calculations and comparisons",
-      "uid" : "9e7c14fccadd5565",
-      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025269124,
-        "stop" : 1772025269168,
-        "duration" : 44
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT03 - Validate error when creating a product with a duplicate name",
-      "uid" : "68c652cf2fd73867",
-      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025269171,
-        "stop" : 1772025269315,
-        "duration" : 144
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "CT04 - Search for products using query parameters",
-      "uid" : "d0c03fe900a7f915",
-      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
-      "status" : "passed",
-      "time" : {
-        "start" : 1772025269317,
-        "stop" : 1772025269379,
+        "start" : 1772073421133,
+        "stop" : 1772073421195,
         "duration" : 62
       },
       "flaky" : false,
@@ -883,14 +416,341 @@
       "retriesStatusChange" : false,
       "parameters" : [ ]
     }, {
-      "name" : "CT05 - Update information of an existing product",
-      "uid" : "f84329ca95182673",
+      "name" : "CT05 - Validate invalid email format CT05 - Validate invalid email format: email@nodomain",
+      "uid" : "315e3705a1116b64",
+      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073421198,
+        "stop" : 1772073421248,
+        "duration" : 50
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT05 - Validate invalid email format CT05 - Validate invalid email format: email",
+      "uid" : "93f0c36147e04963",
+      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073421251,
+        "stop" : 1772073421292,
+        "duration" : 41
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT05 - Validate invalid email format CT05 - Validate invalid email format: 12345@test.c",
+      "uid" : "bbac99d2da46e896",
+      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073421295,
+        "stop" : 1772073421341,
+        "duration" : 46
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT05 - Validate invalid email format CT05 - Validate invalid email format: !@#$%",
+      "uid" : "9ab2bf5af5518af9",
+      "parentUid" : "56527a472e70da4c9a945e9dbf2001d4",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073421344,
+        "stop" : 1772073421383,
+        "duration" : 39
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "56527a472e70da4c9a945e9dbf2001d4"
+  }, {
+    "name" : "playwright_serverest.produtos.ProductsPlaywrightTest",
+    "children" : [ {
+      "name" : "CT13 - Restrict product creation to administrators only",
+      "uid" : "e33744772976df9b",
       "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
       "status" : "passed",
       "time" : {
-        "start" : 1772025269383,
-        "stop" : 1772025269545,
-        "duration" : 162
+        "start" : 1772073419795,
+        "stop" : 1772073420139,
+        "duration" : 344
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT12 - Prevent deleting a product that is part of a cart",
+      "uid" : "58915a6cbea211c9",
+      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073420208,
+        "stop" : 1772073420570,
+        "duration" : 362
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT02 - Create a new product as an administrator",
+      "uid" : "935bdd80e7d99ddc",
+      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073420575,
+        "stop" : 1772073420839,
+        "duration" : 264
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT10 - Delete an existing product",
+      "uid" : "2c950aaed40e82a5",
+      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073420842,
+        "stop" : 1772073421175,
+        "duration" : 333
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT11 - Create a product from fixed JSON payload",
+      "uid" : "bdda2d7d3c919457",
+      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073421179,
+        "stop" : 1772073421368,
+        "duration" : 189
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT07 - Attempt to create a product without an authentication token",
+      "uid" : "3ee9104310b600bb",
+      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073421371,
+        "stop" : 1772073421422,
+        "duration" : 51
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT08 - Validate required fields when creating a product CT08 - Validate required fields when creating a product",
+      "uid" : "73c790f47bca7c8f",
+      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073421444,
+        "stop" : 1772073421568,
+        "duration" : 124
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT08 - Validate required fields when creating a product CT08 - Validate required fields when creating a product",
+      "uid" : "14dbbaa93fac47d2",
+      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073421572,
+        "stop" : 1772073421711,
+        "duration" : 139
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT08 - Validate required fields when creating a product CT08 - Validate required fields when creating a product",
+      "uid" : "c68c5d250bc15dc4",
+      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073421714,
+        "stop" : 1772073421835,
+        "duration" : 121
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT08 - Validate required fields when creating a product CT08 - Validate required fields when creating a product",
+      "uid" : "949fe06b1fb3c641",
+      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073421838,
+        "stop" : 1772073421954,
+        "duration" : 116
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT09 - Work with complex JSON data",
+      "uid" : "2279872bd6268d61",
+      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073421958,
+        "stop" : 1772073421998,
+        "duration" : 40
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT01 - List all products and validate JSON structure",
+      "uid" : "e5f216601d8e0f88",
+      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073422000,
+        "stop" : 1772073422037,
+        "duration" : 37
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT06 - Validate price calculations and comparisons",
+      "uid" : "2ec76ceaee753c29",
+      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073422039,
+        "stop" : 1772073422122,
+        "duration" : 83
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT03 - Validate error when creating a product with a duplicate name",
+      "uid" : "1a171941771b3fb4",
+      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073422125,
+        "stop" : 1772073422317,
+        "duration" : 192
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT04 - Search for products using query parameters",
+      "uid" : "e370efe3080ed69b",
+      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073422319,
+        "stop" : 1772073422393,
+        "duration" : 74
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT05 - Update information of an existing product",
+      "uid" : "fdfb5c7d174bad39",
+      "parentUid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073422397,
+        "stop" : 1772073422572,
+        "duration" : 175
       },
       "flaky" : false,
       "newFailed" : false,
@@ -901,5 +761,145 @@
       "parameters" : [ ]
     } ],
     "uid" : "61f08fd524b8bd0d26422beafd2fc8fe"
+  }, {
+    "name" : "playwright_serverest.carrinhos.CartsPlaywrightTest",
+    "children" : [ {
+      "name" : "CT01 - Full cart lifecycle for authenticated user",
+      "uid" : "d9d53e18d58794a1",
+      "parentUid" : "3c87a19f105b9d0053907132f9878d0a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073419922,
+        "stop" : 1772073420658,
+        "duration" : 736
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT06 - Prevent cart creation when product stock is insufficient",
+      "uid" : "c3f22eeb1284be71",
+      "parentUid" : "3c87a19f105b9d0053907132f9878d0a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073420693,
+        "stop" : 1772073421044,
+        "duration" : 351
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT07 - Prevent cart creation with duplicated products in the same cart",
+      "uid" : "4ed13f3cf174a891",
+      "parentUid" : "3c87a19f105b9d0053907132f9878d0a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073421048,
+        "stop" : 1772073421282,
+        "duration" : 234
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT03 - Prevent creating cart without authentication token",
+      "uid" : "7b4ba8968573f09a",
+      "parentUid" : "3c87a19f105b9d0053907132f9878d0a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073421285,
+        "stop" : 1772073421326,
+        "duration" : 41
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT04 - Prevent creating more than one cart for the same user",
+      "uid" : "901386b5e200deb2",
+      "parentUid" : "3c87a19f105b9d0053907132f9878d0a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073421329,
+        "stop" : 1772073421553,
+        "duration" : 224
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT05 - Cart not found by ID",
+      "uid" : "1ed246d8d09ee732",
+      "parentUid" : "3c87a19f105b9d0053907132f9878d0a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073421556,
+        "stop" : 1772073421587,
+        "duration" : 31
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT02 - Cancel purchase and return products to stock",
+      "uid" : "7a1d49dbfcf13aee",
+      "parentUid" : "3c87a19f105b9d0053907132f9878d0a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073421590,
+        "stop" : 1772073421897,
+        "duration" : 307
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "CT08 - Prevent cart creation with non-existing product",
+      "uid" : "d8222de755eee354",
+      "parentUid" : "3c87a19f105b9d0053907132f9878d0a",
+      "status" : "passed",
+      "time" : {
+        "start" : 1772073421901,
+        "stop" : 1772073422061,
+        "duration" : 160
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "3c87a19f105b9d0053907132f9878d0a"
   } ]
 }
