@@ -1,8 +1,8 @@
 {
   "total" : 4,
   "items" : [ {
-    "uid" : "342affedaee1105ab7cc09d9e63f603d",
-    "name" : "playwright_serverest.usuarios.UsersPlaywrightTest",
+    "uid" : "61f08fd524b8bd0d26422beafd2fc8fe",
+    "name" : "playwright_serverest.produtos.ProductsPlaywrightTest",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
@@ -12,8 +12,8 @@
       "total" : 16
     }
   }, {
-    "uid" : "61f08fd524b8bd0d26422beafd2fc8fe",
-    "name" : "playwright_serverest.produtos.ProductsPlaywrightTest",
+    "uid" : "342affedaee1105ab7cc09d9e63f603d",
+    "name" : "playwright_serverest.usuarios.UsersPlaywrightTest",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,

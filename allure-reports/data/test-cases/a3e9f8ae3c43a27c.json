@@ -1,0 +1,64 @@
+{
+  "uid" : "a3e9f8ae3c43a27c",
+  "name" : "CT03 - Create a new user with complete validations",
+  "fullName" : "playwright_serverest.usuarios.UsersPlaywrightTest.ct03_createUser",
+  "historyId" : "b7f563cde21f832bff657ea9e9ed6ee7",
+  "time" : {
+    "start" : 1772074640653,
+    "stop" : 1772074641135,
+    "duration" : 482
+  },
+  "description" : "",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "junit.platform.uniqueid",
+    "value" : "[engine:junit-jupiter]/[class:playwright_serverest.usuarios.UsersPlaywrightTest]/[method:ct03_createUser()]"
+  }, {
+    "name" : "host",
+    "value" : "runnervmnay03"
+  }, {
+    "name" : "thread",
+    "value" : "2397@runnervmnay03.main(1)"
+  }, {
+    "name" : "framework",
+    "value" : "junit-platform"
+  }, {
+    "name" : "language",
+    "value" : "java"
+  }, {
+    "name" : "package",
+    "value" : "playwright_serverest.usuarios.UsersPlaywrightTest"
+  }, {
+    "name" : "testClass",
+    "value" : "playwright_serverest.usuarios.UsersPlaywrightTest"
+  }, {
+    "name" : "testMethod",
+    "value" : "ct03_createUser"
+  }, {
+    "name" : "suite",
+    "value" : "playwright_serverest.usuarios.UsersPlaywrightTest"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a3e9f8ae3c43a27c.json",
+  "parameterValues" : [ ]
+}
