@@ -451,6 +451,51 @@ O relatório exibe:
 - 📋 Resultado de requisições e respostas
 - 📊 Histórico de execuções
 
+### 🏷️ Tags do Allure para usar nos testes
+
+As anotações abaixo ajudam a categorizar e enriquecer o relatório Allure:
+
+- `@Epic("Autenticação")` → macro área funcional
+- `@Feature("Login")` → funcionalidade principal
+- `@Story("Login com credenciais válidas")` → cenário de negócio
+- `@Severity(SeverityLevel.CRITICAL)` → criticidade do teste
+- `@Owner("qa-team")` → responsável pelo teste
+- `@Description("Valida retorno de token no login")` → descrição detalhada
+- `@Issue("SRV-123")` → vínculo com bug/incidente
+- `@TmsLink("TC-001")` → vínculo com caso de teste no TMS
+- `@Link(name = "Swagger", url = "https://serverest.dev")` → link útil no relatório
+- `Allure.step("Criar usuário de teste")` → passo explícito na execução
+
+Exemplo:
+
+```java
+import io.qameta.allure.Allure;
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+import io.qameta.allure.Story;
+import io.qameta.allure.TmsLink;
+import io.qameta.allure.Issue;
+
+@Test
+@Epic("Autenticação")
+@Feature("Login")
+@Story("Login com credenciais válidas")
+@Severity(SeverityLevel.CRITICAL)
+@Owner("qa-team")
+@Description("Deve autenticar usuário e retornar token Bearer")
+@Issue("SRV-123")
+@TmsLink("TC-LOGIN-001")
+void ct01_loginWithValidCredentials() {
+    Allure.step("Criar usuário válido");
+    Allure.step("Realizar login com email e senha");
+    Allure.step("Validar status 200 e token no body");
+}
+```
+
 ---
 
 ## 🎓 Boas Práticas
